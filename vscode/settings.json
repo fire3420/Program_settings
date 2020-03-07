@@ -1,0 +1,105 @@
+{
+    "editor.mouseWheelZoom": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
+    "vim.useSystemClipboard": true,
+    "vim.leader": ";",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "leader",
+                "o"
+            ],
+            "after": [
+                "<C-m>",
+                "o",
+                "<Esc>"
+            ]
+        },
+        {
+            "before": [
+                "<C-n>"
+            ],
+            "commands": [
+                ":tabnew"
+            ]
+        },
+        {
+            "before": [
+                "<C-w>"
+            ],
+            "commands": [
+                ":tabclose"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "r"
+            ],
+            "after": [
+                "<C-r>"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "d"
+            ],
+            "after": [
+                "\"_d"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "1"
+            ],
+            "after": [
+                "^"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "2"
+            ],
+            "after": [
+                "$"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "leader",
+                "1"
+            ],
+            "after": [
+                "^"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "2"
+            ],
+            "after": [
+                "$"
+            ]
+        }
+    ],
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "python.formatting.provider": "black"
+}
