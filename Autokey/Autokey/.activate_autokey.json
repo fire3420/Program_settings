@@ -1,0 +1,33 @@
+{
+    "type": "script",
+    "description": "activate_autokey",
+    "store": {
+        "caf_index": 0
+    },
+    "modes": [
+        3
+    ],
+    "usageCount": 104,
+    "prompt": false,
+    "omitTrigger": false,
+    "showInTrayMenu": false,
+    "abbreviation": {
+        "abbreviations": [],
+        "backspace": true,
+        "ignoreCase": false,
+        "immediate": false,
+        "triggerInside": false,
+        "wordChars": "[\\w]"
+    },
+    "hotkey": {
+        "modifiers": [
+            "<alt>",
+            "<ctrl>"
+        ],
+        "hotKey": "f"
+    },
+    "filter": {
+        "regex": null,
+        "isRecursive": false
+    }
+}

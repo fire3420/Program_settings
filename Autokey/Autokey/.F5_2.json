@@ -1,0 +1,31 @@
+{
+    "type": "script",
+    "description": "F5_2",
+    "store": {},
+    "modes": [
+        3
+    ],
+    "usageCount": 40,
+    "prompt": false,
+    "omitTrigger": false,
+    "showInTrayMenu": false,
+    "abbreviation": {
+        "abbreviations": [],
+        "backspace": true,
+        "ignoreCase": false,
+        "immediate": false,
+        "triggerInside": false,
+        "wordChars": "[\\w]"
+    },
+    "hotkey": {
+        "modifiers": [
+            "<hyper>",
+            "<super>"
+        ],
+        "hotKey": "1"
+    },
+    "filter": {
+        "regex": null,
+        "isRecursive": false
+    }
+}

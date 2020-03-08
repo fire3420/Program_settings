@@ -1,0 +1,31 @@
+{
+    "type": "script",
+    "description": "Date_2019_1106_1034",
+    "store": {},
+    "modes": [
+        3
+    ],
+    "usageCount": 0,
+    "prompt": false,
+    "omitTrigger": false,
+    "showInTrayMenu": false,
+    "abbreviation": {
+        "abbreviations": [],
+        "backspace": true,
+        "ignoreCase": false,
+        "immediate": false,
+        "triggerInside": false,
+        "wordChars": "[\\w]"
+    },
+    "hotkey": {
+        "modifiers": [
+            "<hyper>",
+            "<super>"
+        ],
+        "hotKey": "6"
+    },
+    "filter": {
+        "regex": null,
+        "isRecursive": false
+    }
+}
