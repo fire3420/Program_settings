@@ -17,13 +17,16 @@ if(not as3_index):
     as3_index = 0
     store.set_value("as3_index",0)
 if(getlist):
-    if(as3_index > len(getlist)-1):
-        as3_index = 0
-    os.system('wmctrl -i -a '+getlist[as3_index])
-    if(as3_index == len(getlist)-1):
-        nextind = 0
+    winClass = window.get_active_class()
+    if(winClass == 'code.Code'):
+        if(as3_index == len(getlist)-1):
+            nextind = 0
+        else:
+            nextind = as3_index+1
     else:
-        nextind = as3_index+1
+        nextind = as3_index
+
+    os.system('wmctrl -i -a '+getlist[nextind])
     store.set_value("as3_index",nextind)
 else:
     os.system('code')
