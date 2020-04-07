@@ -2,6 +2,8 @@ yes | pip install jupyter_contrib_nbextensions
 yes | pip install pixiedust
 yes | pip install jupytext --upgrade
 
+jupyter contrib nbextension install
+
 Curr=$(pwd)
 
 mkdir -p $(jupyter --data-dir)/nbextensions
