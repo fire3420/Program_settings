@@ -17,6 +17,9 @@ mkdir ~/.jupyter/custom
 
 jupyter serverextension enable jupytext
 
+jupyter nbextension enable varInspector/main
+jupyter nbextension enable execute_time/ExecuteTime
+jupyter nbextension enable hide_input_all/main
 
 XPATH=/home/${USER}
 XPATH_SUB=/home/${USER}/.jupyter
