@@ -21,6 +21,10 @@ jupyter nbextension enable varInspector/main
 jupyter nbextension enable execute_time/ExecuteTime
 jupyter nbextension enable hide_input_all/main
 
+jupyter nbextension enable toc2/main
+jupyter nbextension enable notify/notify
+
+
 XPATH=/home/${USER}
 XPATH_SUB=/home/${USER}/.jupyter
 
