@@ -16,6 +16,9 @@ as3_index = store.get_value("as3_index")
 if(not as3_index):
     as3_index = 0
     store.set_value("as3_index",0)
+if as3_index>len(getlist)-1:
+    as3_index=0
+    store.set_value("as3_index",0)
 if(getlist):
     winClass = window.get_active_class()
     if(winClass == 'code.Code'):
