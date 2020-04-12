@@ -1,9 +1,11 @@
 {
     "type": "script",
-    "description": "F12",
+    "description": "pygdocs",
     "store": {},
-    "modes": [],
-    "usageCount": 6,
+    "modes": [
+        3
+    ],
+    "usageCount": 0,
     "prompt": false,
     "omitTrigger": false,
     "showInTrayMenu": false,

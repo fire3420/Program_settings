@@ -102,5 +102,9 @@
     {
         "key": "ctrl+shift+alt+y",
         "command": "workbench.debug.action.focusRepl"
+    },
+    {
+        "key": "alt+]",
+        "command": "python.datascience.addcellbelow"
     }
 ]
