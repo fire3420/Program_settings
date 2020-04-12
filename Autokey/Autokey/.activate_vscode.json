@@ -1,11 +1,13 @@
 {
     "type": "script",
     "description": "activate_vscode",
-    "store": {},
+    "store": {
+        "as3_index": 1
+    },
     "modes": [
         3
     ],
-    "usageCount": 17,
+    "usageCount": 22,
     "prompt": false,
     "omitTrigger": false,
     "showInTrayMenu": false,

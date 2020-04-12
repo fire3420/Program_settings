@@ -10,7 +10,7 @@ def winexists(target):
             return True
     return False
 
-Scriptpath = '/home/john/Jungyong/Automation/Software/Pygdocs/Pygdocs_linux/Scripts'
+Scriptpath = '/home/john/Jungyong/Pygdocs_gitlab/Pygdocs_linux/Scripts'
 Pythonpath = '/home/john/anaconda3/envs/pygdocs_linux/bin/python'
 if(winexists("pygdocseditor2")):
     window.activate('pygdocseditor2', switchDesktop=True)
