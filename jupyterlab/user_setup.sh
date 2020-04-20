@@ -4,7 +4,7 @@ jupyter labextension enable @axlair/jupyterlab_vim
 
 # THEME
 git clone https://github.com/fire3420/jupyterlab-theme-solarized-dark.git ~/.jupyter/theme_solardark
-cd ~/.jupyter/theme_solardark && jupyter labextension install . && jupyter labextension enable .
+jupyter labextension install ~/.jupyter/theme_solardark && jupyter labextension enable ~/.jupyter/theme_solardark
 # cd ~/jupyterlab-theme-solarized-dark && npm install && jupyter labextension link . && npm run build && jupyter lab build
 
 #Jupytext
@@ -20,7 +20,7 @@ jupyter labextension enable jupyterlab-jupytext
 
 ## config file
 ln -ds ${PWD}/jupyter_notebook_config.py ~/.jupyter/
-ln -ds ${PWD}/@jupyterlab ~/.jupyter/lab/lab/user-settings/@jupyterlab
+ln -ds ${PWD}/@jupyterlab ~/.jupyter/lab/user-settings/@jupyterlab
 
 ## other packages
 jupyter labextension install jupyterlab-execute-time
