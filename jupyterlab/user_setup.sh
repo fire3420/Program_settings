@@ -18,6 +18,9 @@ jupyter labextension enable jupyterlab-jupytext
 #
 # [ -d /home/${USER}/.jupyter ] && rm -rf /home/${USER}/.jupyter
 
+[ ! -d /home/${USER}/.jupyter/lab ] &&  mkdir /home/${USER}/.jupyter/lab && mkdir /home/${USER}/.jupyter/lab/user-settings/
+[ -f /home/${USER}/.jupyter/jupyter_notebook_config.py ] && rm /home/${USER}/.jupyter/jupyter_notebook_config.py
+
 ## config file
 ln -ds ${PWD}/jupyter_notebook_config.py ~/.jupyter/
 ln -ds ${PWD}/@jupyterlab ~/.jupyter/lab/user-settings/@jupyterlab
