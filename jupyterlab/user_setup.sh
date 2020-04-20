@@ -3,8 +3,8 @@ jupyter labextension install @axlair/jupyterlab_vim
 jupyter labextension enable @axlair/jupyterlab_vim
 
 # THEME
-git clone https://github.com/fire3420/jupyterlab-theme-solarized-dark.git ~/
-cd ~/jupyterlab-theme-solarized-dark && jupyter labextension install . && jupyter labextension enable .
+git clone https://github.com/fire3420/jupyterlab-theme-solarized-dark.git ~/.jupyter/theme_solardark
+cd ~/.jupyter/theme_solardark && jupyter labextension install . && jupyter labextension enable .
 # cd ~/jupyterlab-theme-solarized-dark && npm install && jupyter labextension link . && npm run build && jupyter lab build
 
 #Jupytext
