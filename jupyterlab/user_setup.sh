@@ -20,7 +20,7 @@ jupyter labextension enable jupyterlab-jupytext
 
 ## config file
 ln -ds ${PWD}/jupyter_notebook_config.py ~/.jupyter/
-
+ln -ds ${PWD}/@jupyterlab ~/.jupyter/lab/lab/user-settings/@jupyterlab
 
 ## other packages
 jupyter labextension install jupyterlab-execute-time
@@ -31,4 +31,5 @@ jupyter labextension install @jupyterlab/toc
 jupyter labextension enable @jupyterlab/toc
 jupyter labextension install @jupyterlab/debugger
 jupyter labextension enable @jupyterlab/debugger
+
 
