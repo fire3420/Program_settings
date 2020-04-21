@@ -1,0 +1,18 @@
+{
+"shortcuts": [
+        {
+            "command": "docmanager:rename",
+            "keys": [
+                "Accel Shift P"
+            ],
+            "selector": "body"
+        },
+        {
+            "command": "docmanager:save",
+            "keys": [
+                "Accel Shift K"
+            ],
+            "selector": "body"
+        },
+    ]
+}
