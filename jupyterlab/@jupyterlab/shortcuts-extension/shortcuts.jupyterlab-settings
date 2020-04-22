@@ -8,7 +8,7 @@
             "selector": "body"
         },
         {
-            "command": "docmanager:save",
+            "command": "docmanager:open-browser-tab",
             "keys": [
                 "Accel Shift K"
             ],
