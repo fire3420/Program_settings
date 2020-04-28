@@ -9,7 +9,4 @@ def winexists(target):
             return True
     return False
     
-if(winexists("Okular")):
-    window.activate('Okular', switchDesktop=True)
-else:
-    os.system("okular")
+window.activate('evince.Evince', switchDesktop=True, matchClass=True)

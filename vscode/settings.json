@@ -130,7 +130,8 @@
         }
     ],
     "todo-tree.highlights.enabled": true,
-    "terminal.integrated.inheritEnv": false,
+    "workbench.editor.enablePreview": false,
+    "terminal.integrated.inheritEnv": true,
     "window.zoomLevel": 0,
     "todo-tree.tree.showScanModeButton": false,
     "vim.hlsearch": true
