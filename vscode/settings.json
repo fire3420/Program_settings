@@ -134,5 +134,6 @@
     "terminal.integrated.inheritEnv": true,
     "window.zoomLevel": 0,
     "todo-tree.tree.showScanModeButton": false,
-    "vim.hlsearch": true
+    "vim.hlsearch": true,
+    "python.pythonPath": "/home/john/anaconda3/envs/pygdocs_linux/bin/python"
 }

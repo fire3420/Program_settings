@@ -19,8 +19,11 @@ if hostname == 'john-B150-HD3':
 elif hostname == 'john-17ZD990-VX50K':
     Scriptpath = '/home/john/Jungyong/Pygdocs_gitlab/Pygdocs_linux/Scripts'
     Pythonpath = '/home/john/anaconda3/envs/pygdocs_linux/bin/python'
+elif hostname == 'RTL':
+    Scriptpath = '/home/john/Jungyong/Pygdocs_linux/Scripts/'
+    Pythonpath = '/home/john/anaconda3/envs/pygdocs_linux/bin/python'
 else:
-    Scriptpath = '/home/john/Jungyong/Automation/Software/Pygdocs/Pygdocs_linux/Scripts'
+    Scriptpath = '/home/john/Jungyong/Pygdocs_linux/Scripts/'
     Pythonpath = '/home/john/anaconda3/envs/pygdocs_linux/bin/python'
 
 
