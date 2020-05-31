@@ -1,0 +1,143 @@
+{
+    "python.formatting.provider": "black",
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "editor.mouseWheelZoom": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
+    "vim.useSystemClipboard": true,
+    "vim.leader": ";",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "leader",
+                "o"
+            ],
+            "after": [
+                "<C-m>",
+                "o",
+                "<Esc>"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "O"
+            ],
+            "after": [
+                "<C-m>",
+                "O",
+                "<Esc>"
+            ]
+        },
+        {
+            "before": [
+                "<C-w>"
+            ],
+            "commands": [
+                ":tabclose"
+            ]
+        },
+        {
+            "before": [
+                "<C-n>"
+            ],
+            "commands": [
+                ":tabnew"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "r"
+            ],
+            "after": [
+                "<C-r>"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "d"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "d"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "1"
+            ],
+            "after": [
+                "^"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "2"
+            ],
+            "after": [
+                "$"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "leader",
+                "1"
+            ],
+            "after": [
+                "^"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "2"
+            ],
+            "after": [
+                "g",
+                "_"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "p"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "d",
+                "P"
+            ]
+        }
+    ],
+    "todo-tree.highlights.enabled": true,
+    "terminal.integrated.inheritEnv": false,
+    "window.zoomLevel": 0,
+    "todo-tree.tree.showScanModeButton": false,
+    "vim.hlsearch": true,
+    "workbench.editor.enablePreview": false,
+    "remote.SSH.remotePlatform": {
+        "h6_tf1": "linux",
+        "h6_tf3": "linux"
+    },
+    "editor.fontSize": 18
+}
