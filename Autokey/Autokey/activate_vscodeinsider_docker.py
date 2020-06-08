@@ -17,27 +17,27 @@ def winexists(target, nontarget, hostname=socket.gethostname()):
                 getexists.append(line.split(None, 3)[0].decode())
     return getexists
 
-getlist = winexists("Visual Studio Code", ["Insider"])
+getlist = winexists("Code - Insiders", ["Chrome"], "appuser")
 
-as3_index = store.get_value("as3_index")
-if(not as3_index):
-    as3_index = 0
-    store.set_value("as3_index",0)
-if as3_index>len(getlist)-1:
-    as3_index=0
-    store.set_value("as3_index",0)
+as3_insider_docker = store.get_value("as3_insider_docker")
+if(not as3_insider_docker):
+    as3_insider_docker = 0
+    store.set_value("as3_insider_docker",0)
+if as3_insider_docker>len(getlist)-1:
+    as3_insider_docker=0
+    store.set_value("as3_insider_docker",0)
 if(getlist):
     winClass = window.get_active_class()
     if(winClass == 'code.Code'):
-        if(as3_index == len(getlist)-1):
+        if(as3_insider_docker == len(getlist)-1):
             nextind = 0
         else:
-            nextind = as3_index+1
+            nextind = as3_insider_docker+1
     else:
-        nextind = as3_index
+        nextind = as3_insider_docker
 
     os.system('wmctrl -i -a '+getlist[nextind])
-    store.set_value("as3_index",nextind)
+    store.set_value("as3_insider_docker",nextind)
 else:
     os.system('code')
 
