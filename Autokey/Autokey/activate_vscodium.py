@@ -10,28 +10,28 @@ def winexists(target, nontarget):
             getexists.append(line.split(None, 3)[0].decode())
     return getexists
 
-getlist = winexists("Visual Studio Code", "Insider")
+getlist = winexists("VSCodium", "Chrome")
 
-as3_index = store.get_value("as3_index")
-if(not as3_index):
-    as3_index = 0
-    store.set_value("as3_index",0)
-if as3_index>len(getlist)-1:
-    as3_index=0
-    store.set_value("as3_index",0)
+as3_index_codium = store.get_value("as3_index_codium")
+if(not as3_index_codium):
+    as3_index_codium = 0
+    store.set_value("as3_index_codium",0)
+if as3_index_codium>len(getlist)-1:
+    as3_index_codium=0
+    store.set_value("as3_index_codium",0)
 if(getlist):
     winClass = window.get_active_class()
-    if(winClass == 'code.Code'):
-        if(as3_index == len(getlist)-1):
+    if(winClass == 'vscodium.VSCodium'):
+        if(as3_index_codium == len(getlist)-1):
             nextind = 0
         else:
-            nextind = as3_index+1
+            nextind = as3_index_codium+1
     else:
-        nextind = as3_index
+        nextind = as3_index_codium
 
     os.system('wmctrl -i -a '+getlist[nextind])
-    store.set_value("as3_index",nextind)
+    store.set_value("as3_index_codium",nextind)
 else:
-    os.system('code')
+    os.system('codium')
 
 

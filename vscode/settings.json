@@ -136,5 +136,8 @@
     "todo-tree.tree.showScanModeButton": false,
     "vim.hlsearch": true,
     "python.pythonPath": "/home/john/anaconda3/envs/pygdocs_linux/bin/python",
-    "explorer.confirmDragAndDrop": false
+    "explorer.confirmDragAndDrop": false,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.jediEnabled": false
 }

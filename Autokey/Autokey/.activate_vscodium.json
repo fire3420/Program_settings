@@ -1,11 +1,11 @@
 {
     "type": "script",
-    "description": "activate_gedit",
-    "store": {
-        "asz_index": 0
-    },
-    "modes": [],
-    "usageCount": 64,
+    "description": "activate_vscodium",
+    "store": {},
+    "modes": [
+        3
+    ],
+    "usageCount": 0,
     "prompt": false,
     "omitTrigger": false,
     "showInTrayMenu": false,
