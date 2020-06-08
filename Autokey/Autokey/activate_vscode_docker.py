@@ -39,6 +39,6 @@ if(getlist):
     os.system('wmctrl -i -a '+getlist[nextind])
     store.set_value("as3_index_docker",nextind)
 else:
-    os.system('code')
+    os.system('docker exec -u appuser -it Apps_ubuntu2 code')
 
 
