@@ -17,7 +17,7 @@
         }
     ],
     "vim.useSystemClipboard": true,
-    "vim.leader": ";",
+    "vim.leader": "\\",
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": [
@@ -137,7 +137,8 @@
     "workbench.editor.enablePreview": false,
     "remote.SSH.remotePlatform": {
         "h6_tf1": "linux",
-        "h6_tf3": "linux"
+        "h6_tf3": "linux",
+        "h6_tfpredict": "linux"
     },
     "editor.fontSize": 18
 }
