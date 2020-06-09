@@ -4,10 +4,8 @@
     "store": {
         "asz_index": 0
     },
-    "modes": [
-        3
-    ],
-    "usageCount": 36,
+    "modes": [],
+    "usageCount": 64,
     "prompt": false,
     "omitTrigger": false,
     "showInTrayMenu": false,

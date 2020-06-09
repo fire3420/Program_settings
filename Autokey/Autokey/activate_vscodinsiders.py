@@ -17,28 +17,28 @@ def winexists(target, nontarget, hostname=socket.gethostname()):
                 getexists.append(line.split(None, 3)[0].decode())
     return getexists
 
-getlist = winexists("Visual Studio Code", ["Insider"])
+getlist = winexists("Code - Insiders", ["Chrome"])
 
-as3_index = store.get_value("as3_index")
-if(not as3_index):
-    as3_index = 0
-    store.set_value("as3_index",0)
-if as3_index>len(getlist)-1:
-    as3_index=0
-    store.set_value("as3_index",0)
+as3_index_insiders = store.get_value("as3_index_insiders")
+if(not as3_index_insiders):
+    as3_index_insiders = 0
+    store.set_value("as3_index_insiders",0)
+if as3_index_insiders>len(getlist)-1:
+    as3_index_insiders=0
+    store.set_value("as3_index_insiders",0)
 if(getlist):
     winClass = window.get_active_class()
-    if(winClass == 'code.Code'):
-        if(as3_index == len(getlist)-1):
+    if(winClass == 'code - insiders.Code - Insiders'):
+        if(as3_index_insiders == len(getlist)-1):
             nextind = 0
         else:
-            nextind = as3_index+1
+            nextind = as3_index_insiders+1
     else:
-        nextind = as3_index
+        nextind = as3_index_insiders
 
     os.system('wmctrl -i -a '+getlist[nextind])
-    store.set_value("as3_index",nextind)
+    store.set_value("as3_index_insiders",nextind)
 else:
-    os.system('code')
+    os.system('code-insiders')
 
 

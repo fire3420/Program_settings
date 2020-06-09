@@ -1,13 +1,13 @@
 {
     "type": "script",
-    "description": "activate_vscode",
+    "description": "activate_vscode_docker",
     "store": {
         "as3_index": 0
     },
     "modes": [
         3
     ],
-    "usageCount": 138,
+    "usageCount": 4,
     "prompt": false,
     "omitTrigger": false,
     "showInTrayMenu": false,
@@ -21,6 +21,7 @@
     },
     "hotkey": {
         "modifiers": [
+            "<alt>",
             "<hyper>"
         ],
         "hotKey": "0"
