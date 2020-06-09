@@ -138,7 +138,12 @@
     "remote.SSH.remotePlatform": {
         "h6_tf1": "linux",
         "h6_tf3": "linux",
-        "h6_tfpredict": "linux"
+        "h6_tfpredict": "linux",
+        "AMD_jyRL1": "linux",
+        "AMD_jyRL2": "linux"
     },
-    "editor.fontSize": 18
+    "editor.fontSize": 18,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.jediEnabled": false
 }
