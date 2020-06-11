@@ -1,3 +1,7 @@
 
 mklink "C:\Users\Jungyong\AppData\Roaming\Code\User\settings.json" "C:\Users\Jungyong\Desktop\Jungyong\Program_settings\vscode\windows\settings.json"
 mklink "C:\Users\Jungyong\AppData\Roaming\Code\User\keybindings.json" "C:\Users\Jungyong\Desktop\Jungyong\Program_settings\vscode\windows\keybindings.json"
+
+
+mklink "C:\Users\Jungyong\AppData\Roaming\Code\User\settings.json" "C:\Users\Jungyong\Desktop\Jungyong\Program_settings\vscode\windows\settings.json"
+mklink "C:\Users\Jungyong\AppData\Roaming\Code\User\keybindings.json" "C:\Users\Jungyong\Desktop\Jungyong\Program_settings\vscode\windows\keybindings.json"
