@@ -16,6 +16,8 @@
             ]
         }
     ],
+    "vim.easymotion": true,
+    "vim.easymotionMarkerFontSize": 22,
     "vim.useSystemClipboard": true,
     "vim.leader": "\\",
     "vim.normalModeKeyBindingsNonRecursive": [
