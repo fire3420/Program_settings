@@ -1,15 +1,10 @@
-
 // ==UserScript==
 // @name         Google cal3(Tasks)
 // @match        *://tasks.google.com/*
-// @require    http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js
+// @require http://code.jquery.com/jquery-3.4.1.min.js
 // ==/UserScript==
-
-// store url on load
 var currentPage = location.href;
-
 var isredirect_prepare = 0;
-$('div[aria-label="Select task list"][role="button"]')[0].onclick = function () { isredirect_prepare = 1; };
 
 setInterval(function () {
     if (currentPage != location.href) {
@@ -29,11 +24,17 @@ setInterval(function () {
 }, 500);
 
 function doc_keyUp(e) {
-    alert('keykey');
-    if (e.ctrlKey && e.altKey && e.keyCode == 79) { //^!o = %!+d
+    if (e.ctrlKey && e.altKey && e.keyCode == 79) { //^!o = !+d
         $('div[aria-label="Remove date and time"]')[0].click();
     }
-    else if (e.ctrlKey && e.altKey && e.keyCode == 73) { //^!i = %+d, Tasks의 세부정보항에서  날짜 선택
+    else if (e.ctrlKey && e.altKey && e.keyCode == 57) { //!^9 =!z Task list상에서 ... 택하기
+        //alert('success');
+        var button6 = $('span[title="More"]');
+        //triggerClickEvent(button6);
+        button6.click()
+        //alert(button6.innerHTML);
+    }
+    else if (e.ctrlKey && e.altKey && e.keyCode == 73) { //^!i = !+d, Tasks의 세부정보항에서  날짜 선택
         var button20 = $('button:contains("Add date/time")')[0];
         var button21 = $('div[role="button"]:contains("월"):contains("일")')[0];
         if (button20) {
@@ -47,23 +48,14 @@ function doc_keyUp(e) {
         var button3 = $("span").filter(function () { return ($(this).text() === 'Add subtasks') });
         button3.click()
     }
-    else if (e.ctrlKey && e.altKey && e.keyCode == 78) { //!^n =%+t task list상에서 할일 추가
+    else if (e.ctrlKey && e.altKey && e.keyCode == 80) { //^!p  = !1  Task 어디서든 list 꺼내기
 
-        var button8 = $('div[role="button"]:contains("Add a task")')[0];
-        button8.click();
-        //alert('success');
-        //alert(button8.innerHTML);
-    }
-    else if (e.ctrlKey && e.altKey && e.keyCode == 72) { //^!h = %+a Task 어디서든 완료 표시
-        $('div[aria-label="완료로 표시"][role="button"]')[0].click();
-    }
-    else if (e.ctrlKey && e.altKey && e.keyCode == 80) { //^!p  = ^+1  Task 어디서든 list 꺼내기
-        //alert('hello');
-        var button50 = $('div[aria-label="Select task list"][role="button"]')[0];//Tasks list 화살표 꺼내기
+        var button50 = $('div[aria-haspopup="true"][role="button"]')[0];//Tasks list 화살표 꺼내기
         //alert(button50.innerHTML);
         var button30 = $("span").filter(function () { return ($(this).text() === 'Add subtasks') });
 
         if (button50) {
+            //alert('hello');
             //triggerClickEvent(button50.lastElementChild);
             var button500 = button50.lastElementChild.lastElementChild.lastElementChild;
             //var button501=button500.filter(function(){return ($(this).attr('aria-hidden')=='true')});
@@ -74,17 +66,21 @@ function doc_keyUp(e) {
             //triggerClickEvent(button500);
         }
         if (button30) {
+            //alert('hello');
             var button51 = $('div[aria-label="Move task to another task list"]')[0];//Tasks 세부정보항에서 화살표 꺼내기
             triggerClickEvent(button51.firstElementChild);
         }
 
     }
-    else if (e.ctrlKey && e.altKey && e.keyCode == 57) { //!^9 =%+t Task list상에서 ... 택하기
-        alert('success');
-        var button6 = $('span[title="More"]');
-        //triggerClickEvent(button6);
-        button6.click()
-        //alert(button6.innerHTML);
+    else if (e.ctrlKey && e.altKey && e.keyCode == 78) { //!^n =!t task list상에서 할일 추가
+
+        var button8 = $('div[role="button"]:contains("Add a task")')[0];
+        button8.click();
+        //alert('success');
+        //alert(button8.innerHTML);
+    }
+    else if (e.ctrlKey && e.altKey && e.keyCode == 72) { //^!h = %+a Task 어디서든 완료 표시
+        $('div[aria-label="완료로 표시"][role="button"]')[0].click();
     }
     else if (e.ctrlKey && e.altKey && e.keyCode == 49) { //^!1
         var button10 = $("span").filter(function () { return ($(this).text() === 'OK') });
@@ -93,8 +89,6 @@ function doc_keyUp(e) {
             button10.click();
         }
     }
-
-
 }
 
 //document.addEventListener('keyup', doc_keyUp, false);
