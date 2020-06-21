@@ -137,7 +137,9 @@
     "workbench.editor.enablePreview": false,
     "remote.SSH.remotePlatform": {
         "h6_tf1": "linux",
-        "h6_tf3": "linux"
+        "h6_tf3": "linux",
+        "hm_pred": "linux",
+        "hm_cron": "linux"
     },
     "editor.fontSize": 18
 }
