@@ -16,8 +16,10 @@
             ]
         }
     ],
+    "vim.easymotion": true,
+    "vim.easymotionMarkerFontSize": 22,
     "vim.useSystemClipboard": true,
-    "vim.leader": ";",
+    "vim.leader": "\\",
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": [
@@ -135,5 +137,9 @@
     "window.zoomLevel": 0,
     "todo-tree.tree.showScanModeButton": false,
     "vim.hlsearch": true,
-    "python.pythonPath": "/home/john/anaconda3/envs/pygdocs_linux/bin/python"
+    "python.pythonPath": "/home/john/anaconda3/envs/pygdocs_linux/bin/python",
+    "explorer.confirmDragAndDrop": false,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.jediEnabled": false,
 }

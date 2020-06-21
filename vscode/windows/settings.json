@@ -16,8 +16,10 @@
             ]
         }
     ],
+    "vim.easymotion": true,
+    "vim.easymotionMarkerFontSize": 22,
     "vim.useSystemClipboard": true,
-    "vim.leader": ";",
+    "vim.leader": "\\",
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": [
@@ -139,7 +141,13 @@
         "h6_tf1": "linux",
         "h6_tf3": "linux",
         "hm_pred": "linux",
-        "hm_cron": "linux"
+        "hm_cron": "linux",
+        "h6_tfpredict": "linux",
+        "AMD_jyRL1": "linux",
+        "AMD_jyRL2": "linux"
     },
-    "editor.fontSize": 18
+    "editor.fontSize": 18,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.jediEnabled": false
 }

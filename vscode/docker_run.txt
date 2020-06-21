@@ -1,0 +1,1 @@
+docker run --volume /tmp/.X11-unix:/tmp/.X11-unix:ro -e DISPLAY=$DISPLAY -it --name=Apps_ubuntu2 --hostname=appuser ubuntu:18.04 bash

@@ -1,13 +1,13 @@
 {
     "type": "script",
-    "description": "activate_vscode",
+    "description": "activate_vscodinsiders",
     "store": {
-        "as3_index": 0
+        "as3_index_insiders": 0
     },
     "modes": [
         3
     ],
-    "usageCount": 138,
+    "usageCount": 48,
     "prompt": false,
     "omitTrigger": false,
     "showInTrayMenu": false,
@@ -23,7 +23,7 @@
         "modifiers": [
             "<hyper>"
         ],
-        "hotKey": "0"
+        "hotKey": "<f12>"
     },
     "filter": {
         "regex": null,

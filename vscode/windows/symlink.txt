@@ -1,3 +1,19 @@
+mklink "C:\Users\Jungyong\AppData\Roaming\Code - Insiders\User\settings.json" "C:\Users\Jungyong\Desktop\Jungyong\Program_settings\vscode\windows\settings.json"
+mklink "C:\Users\Jungyong\AppData\Roaming\Code - Insiders\User\keybindings.json" "C:\Users\Jungyong\Desktop\Jungyong\Program_settings\vscode\windows\keybindings.json"
 
 mklink "C:\Users\Jungyong\AppData\Roaming\Code\User\settings.json" "C:\Users\Jungyong\Desktop\Jungyong\Program_settings\vscode\windows\settings.json"
 mklink "C:\Users\Jungyong\AppData\Roaming\Code\User\keybindings.json" "C:\Users\Jungyong\Desktop\Jungyong\Program_settings\vscode\windows\keybindings.json"
+
+mklink "C:\Users\Jungyong\AppData\Roaming\Code\User\settings.json" "C:\Users\Jungyong\Desktop\Jungyong\Program_settings\vscode\windows\settings.json"
+mklink "C:\Users\Jungyong\AppData\Roaming\Code\User\keybindings.json" "C:\Users\Jungyong\Desktop\Jungyong\Program_settings\vscode\windows\keybindings.json"
+
+C:\Users\fire3\AppData\Roaming\VSCodium\User
+
+mklink "C:\\Users\\fire3\\AppData\\Roaming\\Code\\User\\settings.json" "C:\\Users\\fire3\\Jungyong\\Program_settings\\vscode\\windows\\settings.json"
+mklink "C:\\Users\\fire3\\AppData\\Roaming\\Code\\User\\keybindings.json" "C:\\Users\\fire3\\Jungyong\\Program_settings\\vscode\\windows\\keybindings.json"
+
+mklink "C:\\Users\\fire3\\AppData\\Roaming\\Code - Insiders\\User\\settings.json" "C:\\Users\\fire3\\Jungyong\\Program_settings\\vscode\\windows\\settings.json"
+mklink "C:\\Users\\fire3\\AppData\\Roaming\\Code - Insiders\\User\\keybindings.json" "C:\\Users\\fire3\\Jungyong\\Program_settings\\vscode\\windows\\keybindings.json"
+
+mklink "C:\Users\fire3\AppData\Roaming\VSCodium\User\settings.json" "C:\\Users\\fire3\\Jungyong\\Program_settings\\vscode\\windows\\settings.json"
+mklink "C:\Users\fire3\AppData\Roaming\VSCodium\User\keybindings.json" "C:\\Users\\fire3\\Jungyong\\Program_settings\\vscode\\windows\\keybindings.json"

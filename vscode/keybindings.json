@@ -138,5 +138,5 @@
     {
         "key": "ctrl+shift+alt+i",
         "command": "workbench.action.terminal.focus"
-    }
+    },
 ]
