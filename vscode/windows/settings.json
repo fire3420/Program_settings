@@ -140,6 +140,8 @@
     "remote.SSH.remotePlatform": {
         "h6_tf1": "linux",
         "h6_tf3": "linux",
+        "hm_pred": "linux",
+        "hm_cron": "linux",
         "h6_tfpredict": "linux",
         "AMD_jyRL1": "linux",
         "AMD_jyRL2": "linux"
