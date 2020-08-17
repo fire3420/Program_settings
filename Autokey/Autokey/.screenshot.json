@@ -1,11 +1,9 @@
 {
     "type": "script",
-    "description": "Backspace",
+    "description": "screenshot",
     "store": {},
-    "modes": [
-        3
-    ],
-    "usageCount": 0,
+    "modes": [],
+    "usageCount": 5,
     "prompt": false,
     "omitTrigger": false,
     "showInTrayMenu": false,
@@ -18,8 +16,11 @@
         "wordChars": "[\\w]"
     },
     "hotkey": {
-        "modifiers": [],
-        "hotKey": "`"
+        "modifiers": [
+            "<shift>",
+            "<super>"
+        ],
+        "hotKey": "s"
     },
     "filter": {
         "regex": null,
