@@ -10,3 +10,10 @@ clear Lock
 keycode 66 = Hyper_L NoSymbol Hyper_L
 remove mod4 = Hyper_L
 add mod3 = Hyper_L
+
+! clear Shift
+! keycode 62 = Meta_L NoSymbol Meta_L
+! remove mod1 = Meta_L
+! add mod3 = Meta_L
+
+

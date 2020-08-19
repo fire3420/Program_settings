@@ -1,6 +1,6 @@
 {
     "type": "script",
-    "description": "Backspace",
+    "description": "right_right",
     "store": {},
     "modes": [
         3
@@ -18,8 +18,10 @@
         "wordChars": "[\\w]"
     },
     "hotkey": {
-        "modifiers": [],
-        "hotKey": "`"
+        "modifiers": [
+            "<meta>"
+        ],
+        "hotKey": "1"
     },
     "filter": {
         "regex": null,

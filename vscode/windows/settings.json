@@ -153,5 +153,6 @@
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "python.jediEnabled": false,
-    "python.languageServer": "Microsoft"
+    "python.languageServer": "Microsoft",
+    "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace"
 }
