@@ -117,5 +117,10 @@
     {
         "key": "ctrl+shift+alt+i",
         "command": "workbench.action.terminal.focus"
-    }
+    },
+    {
+        "key": "ctrl+shift+alt+j",
+        "command": "bookmarks.jumpToPrevious",
+        "when": "editorTextFocus"
+    },
 ]
