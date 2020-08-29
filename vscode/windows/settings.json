@@ -17,7 +17,7 @@
         }
     ],
     "vim.easymotion": true,
-    "vim.easymotionMarkerFontSize": 12,
+    "vim.easymotionMarkerFontSize": 15,
     "vim.easymotionMarkerBackgroundColor": "red",
     "vim.useSystemClipboard": true,
     "vim.leader": "\\",
