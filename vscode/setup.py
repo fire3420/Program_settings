@@ -10,11 +10,14 @@ INSIDERPATH2 = Path("/home") / getpass.getuser() / ".config" / "Code - Insiders"
 if VSPATH.is_dir():
     os.system(f"ln -fs {os.getcwd()}/keybindings.json {str(VSPATH)}/keybindings.json")
     os.system(f"ln -fs {os.getcwd()}/settings.json {str(VSPATH)}/settings.json")
+    os.system(f"ln -fs {os.getcwd()}/markdown.json {str(VSPATH)}/snippets/markdown.json")
 
 if CODIUMPATH.is_dir():
     os.system(f"ln -fs {os.getcwd()}/keybindings.json {str(CODIUMPATH)}/keybindings.json")
     os.system(f"ln -fs {os.getcwd()}/settings.json {str(CODIUMPATH)}/settings.json")
+    os.system(f"ln -fs {os.getcwd()}/markdown.json {str(CODIUMPATH)}/snippets/markdown.json")
 
 if INSIDERPATH2.is_dir():
     os.system(f"ln -fs {os.getcwd()}/keybindings.json {str(INSIDERPATH)}/keybindings.json")
     os.system(f"ln -fs {os.getcwd()}/settings.json {str(INSIDERPATH)}/settings.json")
+    os.system(f"ln -fs {os.getcwd()}/markdown.json {str(INSIDERPATH)}/snippets/markdown.json")

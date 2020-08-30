@@ -146,6 +146,7 @@
     "python.languageServer": "Microsoft",
     "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace",
     "vsnotes.defaultNotePath": "/home/john/Jungyong/Projects/gitlab_blog_mysecret/_posts",
+    // "vsnotes.defaultNotePath": "/home/john/Jungyong/Projects/gitlab_blog_mysecret/_posts",
     "vsnotes.defaultNoteTitle": "{dt}-memo_{dd}_{title}.{ext}",
     "vsnotes.templates": [
         "0quicknote",
