@@ -1,11 +1,11 @@
 {
     "type": "script",
-    "description": "Gonext",
+    "description": "delete",
     "store": {},
     "modes": [
         3
     ],
-    "usageCount": 31,
+    "usageCount": 0,
     "prompt": false,
     "omitTrigger": false,
     "showInTrayMenu": false,
@@ -19,7 +19,6 @@
     },
     "hotkey": {
         "modifiers": [
-            "<alt>",
             "<hyper>"
         ],
         "hotKey": "1"
