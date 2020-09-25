@@ -18,7 +18,7 @@
     ],
     "vim.easymotion": true,
     "vim.easymotionMarkerFontSize": 15,
-    "vim.easymotionMarkerBackgroundColor": "red",
+    "vim.easymotionMarkerBackgroundColor": "blue",
     "vim.useSystemClipboard": true,
     "vim.leader": "\\",
     "vim.normalModeKeyBindingsNonRecursive": [
@@ -148,7 +148,9 @@
         "AMD_jyRL2": "linux",
         "h6_rl2": "linux",
         "hm_tfpredict": "linux",
-        "AMD_jyRL2_win": "linux"
+        "AMD_jyRL2_win": "linux",
+        "AMD_jyRL3": "linux",
+        "HP_jyRL3": "linux"
     },
     "editor.fontSize": 18,
     "editor.suggestSelection": "first",
@@ -156,7 +158,7 @@
     "python.jediEnabled": false,
     "python.languageServer": "Microsoft",
     "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace",
-    "vsnotes.defaultNotePath": "C:\\Users\\fire3\\Desktop\\Jungyong\\blog_secret\\_posts",
+    "vsnotes.defaultNotePath": "C:\\Users\\fire3\\OneDrive\\blog_secret\\_posts",
     // "vsnotes.defaultNotePath": "/home/john/Jungyong/Projects/gitlab_blog_mysecret/_posts",
     "vsnotes.defaultNoteTitle": "{dt}-memo_{dd}_{title}.{ext}",
     "vsnotes.templates": [
@@ -197,4 +199,5 @@
         }
     ],
     "vsnotes.defaultNoteName": "Note",
+    "workbench.colorTheme": "Monokai",
 }
