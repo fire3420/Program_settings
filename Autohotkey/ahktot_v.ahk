@@ -2053,6 +2053,21 @@ return
 
 +F3::run taskmgr.exe
 
+$!1::
+SetTitleMatchMode, 2
+if WinActive("ahk_exe doublecmd.exe"){
+	Send, !{1}
+	Send, {esc}
+}
+else if WinActive("Tasks"){
+	Keywait, Ctrl
+	Keywait, Shift
+	SendInput, ^!{p}
+}
+else{
+	Sendinput, !{1}
+}
+return
 
 $^v::
 SetTitleMatchMode, 2

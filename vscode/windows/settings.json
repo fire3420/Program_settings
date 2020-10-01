@@ -202,4 +202,13 @@
     "workbench.colorTheme": "Monokai",
     "update.enableWindowsBackgroundUpdates": false,
     "files.autoGuessEncoding": true,
+    "python.sortImports.args": [
+        "-sp isort.cfg"
+    ],
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+    "vscode-mysql.resultTheme": "Dark"
 }
