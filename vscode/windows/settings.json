@@ -200,4 +200,6 @@
     ],
     "vsnotes.defaultNoteName": "Note",
     "workbench.colorTheme": "Monokai",
+    "update.enableWindowsBackgroundUpdates": false,
+    "files.autoGuessEncoding": true,
 }

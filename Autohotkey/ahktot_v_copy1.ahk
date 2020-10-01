@@ -1,4 +1,4 @@
-﻿
+
 full_command_line := DllCall("GetCommandLine", "str")
 
 if not (A_IsAdmin or RegExMatch(full_command_line, " /restart(?!\S)"))
@@ -29,8 +29,8 @@ GroupAdd, EXCEL, ahk_class XLMAIN
 GroupAdd, SCITE, ahk_exe SciTE.exe
 GroupAdd, IEX, ahk_class IEFrame
 GroupAdd, WORD, ahk_class OpusApp
-GroupAdd, GCAL, Google 스프레드시트
-GroupAdd, GDOC, Google 문서
+GroupAdd, GCAL, Google ���������Ʈ
+GroupAdd, GDOC, Google ����
 GroupAdd, AHKgg, ahk_exe AutoHotkey.exe
 GroupAdd, HWP, ahk_exe Hwp.exe
 GroupAdd, ADOBERD, ahk_class AcrobatSDIWindow
@@ -48,7 +48,6 @@ GroupAdd, SPYDER, Spyder
 GroupAdd, CODE, ahk_exe Code.exe
 GroupAdd, CODEINSIDE, ahk_exe Code - Insiders.exe
 GroupAdd, CODIUM, ahk_exe VSCodium.exe
-GroupAdd, POWERSHELL, ahk_exe powershell.exe
 
 
 toEncode :=	[" ","%", """", "#", "&"
@@ -84,7 +83,7 @@ return
 
 $+3::
 SetTitleMatchMode, 2
-if WinActive("Google 캘린더"){
+if WinActive("Google Ķ����"){
 	Keywait, Shift
 	SendInput,!^{p}
 }
@@ -720,10 +719,10 @@ $F12::
 SetCapsLockState , AlwaysOff
 return
 
+qqww
 $!3::
 	if Winexist("ahk_exe powershell.exe"){
-		; WinActivate ahk_exe powershell.exe
-		GroupActivate, POWERSHELL, r
+		WinActivate ahk_exe powershell.exe
 	}
 	else{
 		run, powershell
@@ -1497,7 +1496,7 @@ return
 
 
 $Esc::
-if WinActive("카카오톡")
+if WinActive("īī����")
 	{
 		WinMinimize, A
 	}
@@ -1761,7 +1760,7 @@ SetTitleMatchMode, 2
 if WinActive("Tasks"){
 	SendInput, !^{h}
 }
-else if WinActive("Google 캘린더"){
+else if WinActive("Google Ķ����"){
 	SendInput, !^{h}
 }
 else{
@@ -1784,7 +1783,7 @@ SetTitleMatchMode, 2
 if WinActive("Tasks"){
 	SendInput, ^!{n}
 }
-else if WinActive("Google 캘린더"){
+else if WinActive("Google Ķ����"){
 	Keywait, Alt
 	SendInput, ^!{6}
 }
@@ -1958,6 +1957,9 @@ SetTitleMatchMode, 2
 			Send, {Ctrl Down}{PgDn}{Ctrl Up}
 		}
 	}
+	else if WinActive("ahk_exe pycharm64.exe"){
+		Send, !{Right}
+	}
 	else if WinActive("ahk_class OpusApp"){
 		Send, !n
 		Send, {e}
@@ -2101,7 +2103,7 @@ if WinActive("Tasks"){
 		Send,+{Tab}
 	}
 }
-else if WinActive("Google 캘린더"){
+else if WinActive("Google Ķ����"){
 	SendInput,^!{5}
 }
 else if WinActive("ahk_exe pycharm64.exe"){
@@ -2161,7 +2163,7 @@ return
 
 $!f::
 SetTitleMatchMode, 2
-if WinActive("Google 캘린더"){
+if WinActive("Google Ķ����"){
 	Send, !^{5}
 }
 else if Winactive("Spyder"){
@@ -2179,7 +2181,7 @@ return
 
 $!g::
 SetTitleMatchMode, 2
-if WinActive("Google 캘린더"){
+if WinActive("Google Ķ����"){
 	SendInput,!^{b}
 }
 else{
@@ -2197,7 +2199,7 @@ if WinActive("Tasks"){
 	Sleep,200
 	Send,+{Tab}
 }
-else if Winactive("Google 캘린더"){
+else if Winactive("Google Ķ����"){
 	SendInput,^!{2}
 }
 else if Winactive("Spyder"){
@@ -2261,7 +2263,7 @@ else if WinActive("ahk_exe MATLAB.exe"){
 else if WinActive("ahk_exe SciTE.exe"){
 	Send, ^{q}
 }
-else if WinActive("Google 캘린더"){
+else if WinActive("Google Ķ����"){
 
 	If WinExist("Tasks"){
 		WinActivate
@@ -2359,7 +2361,7 @@ else{
 return
 
 ^+`::
-if WinActive("Google 캘린더"){
+if WinActive("Google Ķ����"){
 	CoordMode, Mouse, Client
 	SplashImage, WAITSign.jpg
 	MouseClick, left, 344, 222,2
@@ -2610,9 +2612,9 @@ return
 	isc1:=1
 	
 	DetectHiddenWindows, Off
-	if Winexist("카카오톡"){
+	if Winexist("īī����"){
 		;~ GroupActivate, KAKAO, r
-		WinActivate, 카카오톡
+		WinActivate, īī����
 		isc1:=0
 	}
 	if(isc1=1){
@@ -2724,7 +2726,7 @@ else if WinActive("Tasks"){
 	Send,+{Tab}
 	BlockInput Off
 }
-else if WinActive("Google 캘린더"){
+else if WinActive("Google Ķ����"){
 	Keywait, Ctrl
 	Keywait, Shift
 	SendInput, ^!{1}
@@ -2744,7 +2746,7 @@ else if WinActive("ahk_exe matlab.exe"){
 	Send, ^{0}
 	Send, ^{Tab}
 }
-else if WinActive("Google 캘린더"){
+else if WinActive("Google Ķ����"){
 	Send, !^{7}
 }
 else{
@@ -2754,7 +2756,7 @@ return
 
 $!b::
 SetTitleMatchMode, 2
-if WinActive("Google 캘린더"){
+if WinActive("Google Ķ����"){
 	Send, !^{8}
 }
 else{
@@ -2805,8 +2807,8 @@ return
 	SetTitleMatchMode, 2	
 	
 
-	if Winexist("Google 캘린더"){
-		WinActivate Google 캘린더
+	if Winexist("Google Ķ����"){
+		WinActivate Google Ķ����
 	}
 	else{
 		KeyWait Control 
@@ -2832,17 +2834,87 @@ return
 		
 		BlockInput Off
 	}
+	
+	;~ winwait, Google Ķ����
+	
+	;~ SysGet, Monnum, MonitorCount
+	;~ if(Monnum==1){
+		;~ WPXA_Move(-1, 0,  1.0, 1.0, A)  ;1�����ϸ� ���� ������ ����.
+		;~ WPXA_Move(-1, 0,  0.8, 1.0, A)
+	;~ }
+	;~ else{
+		;~ Winmove,A,,-9,-9,1536,1080
+	;~ }
 return
 
+
+^!+a::
+	SetTitleMatchMode, 2	
+	
+	If WinExist("Tasks"){
+		WinActivate
+	}
+	else{
+		run firefox.exe "https://tasks.google.com/embed/?origin=https://calendar.google.com&fullWidth=1"
+	}
+	winwait, Tasks
+		
+	SysGet, Monnum, MonitorCount
+	if(Monnum==1){
+		WPXA_Move(1, 0,  0.2, 1.0, A)
+	}
+	else{
+		Winmove,A,,1513,-9,412,1080
+	}
+
+	if Winexist("Google Ķ����"){
+		WinActivate
+	}
+	else{
+		KeyWait Control 
+		KeyWait Alt
+		KeyWait Shift
+		
+		WinActivate, ahk_class Shell_TrayWnd
+
+		KeyWait Control 
+		KeyWait Alt
+		KeyWait Shift
+		
+		SendInput, {End}
+		SendInput, {Home}
+		
+		BlockInput On
+		Send #T
+		Sleep, 100
+		Loop,17{
+			Send, {right}
+		}
+		Send, {Enter}
+		
+		BlockInput Off
+	}
+	
+	winwait, Google Ķ����
+	
+	SysGet, Monnum, MonitorCount
+	if(Monnum==1){
+		WPXA_Move(-1, 0,  1.0, 1.0, A)  ;1�����ϸ� ���� ������ ����.
+		WPXA_Move(-1, 0,  0.8, 1.0, A)
+	}
+	else{
+		Winmove,A,,-9,-9,1536,1080
+	}
+return
 
 $^!s::
 	SetTitleMatchMode, 2
 	isc1:=1
 
-	if Winexist("Google 스프레드시트"){
-		GroupActivate, GCAL, r
-		isc1:=0
-	}
+		if Winexist("Google ���������Ʈ"){
+			GroupActivate, GCAL, r
+			isc1:=0
+		}
 
 	
 	if(isc1=1){
@@ -2878,7 +2950,7 @@ return
 	SetTitleMatchMode, 2
 	isc1:=1
 	
-		if Winexist("Google 문서"){
+		if Winexist("Google ����"){
 			GroupActivate, GDOC, r
 			isc1:=0
 		}
@@ -3086,8 +3158,109 @@ return
 return
 
 
+
+:*:cfcc::clear;clc;close all;
+:*:cgcc::clear;clc;
+
+
+:*:qegcf::set(gcf,'renderer','painters');print(gcf,'filenamehere','-depsc','-tiff');
+:*:segcf::TTTT=openfig('fignamehere');set(TTTT,'renderer','painters');print(TTTT,'savenamehere','-depsc','-tiff');
+
+
+SetTitleMatchMode, 2
+#IfWinActive, ����������
+
+:*:drt::������2{Down}
+
+:*:wad::������
+#IfWinActive
+
+
+:*:@@#::--------------------------------{Enter}
+
+
+;;;;;;;;%%%%%%%%%%%%%%%%%% Matlab section %%%%%%%%%%%%%%;;;;;;;;;;;;;;;;;;;;;;;
+
+:*:qqr1::%% Section1{Enter}disp('Test section 1');{Enter}
+:*:qqr2::%% Section2{Enter}disp('Test section 2');{Enter}
+:*:qqr3::%% Section3{Enter}disp('Test section 3');{Enter}
+:*:qqr4::%% Section4{Enter}disp('Test section 4');{Enter}
+:*:qqr5::%% Section5{Enter}disp('Test section 5');{Enter}
+:*:qqr6::%% Section6{Enter}disp('Test section 6');{Enter}
+:*:qqr7::%% Section7{Enter}disp('Test section 7');{Enter}
+:*:qqr8::%% Section8{Enter}disp('Test section 8');{Enter}
+:*:qqr9::%% Section9{Enter}disp('Test section 9');{Enter}
+
+:*:dca::dbclear all;{Enter}
+
+
+;;;;;;;;%%%%%%%%%%%%%%%%%%%%% Latex %%%%%%%%%%%;;;;;;;;;;;;;;;;;;;;;;;
+
+:*:trr::\textcolor{{}red{}}{{}
+:*:ttr1::\textcolor{{}BlueGreen{}}{{}
+:*:ttr2::\textcolor{{}Apricot{}}{{}
+:*:ttr3::\textcolor{{}Bittersweet{}}{{}
+:*:ttr4::\textcolor{{}Green{}}{{}
+:*:ttr5::\textcolor{{}Mulberry{}}{{}
+:*:ttr6::\textcolor{{}OliveGreen{}}{{}
+:*:ttr7::\textcolor{{}Orange{}}{{}
+:*:ttr8::\textcolor{{}Magenta{}}{{}
+:*:ttr9::\textcolor{{}Gray{}}{{}
+:*:ttrr1::\textcolor{{}ProcessBlue{}}{{}
+
+:*:bbr::black
+
+:*:tgr::{{}\color{{}red{}}{}}{Left}
+:*:tgg1::{{}\color{{}blue{}}{}}{Left}
+:*:tgg2::{{}\color{{}brown{}}{}}{Left}
+:*:tgg3::{{}\color{{}cyan{}}{}}{Left}
+:*:tgg4::{{}\color{{}gray{}}{}}{Left}
+:*:tgg5::{{}\color{{}green{}}{}}{Left}
+:*:tgg6::{{}\color{{}lime{}}{}}{Left}
+:*:tgg7::{{}\color{{}magenta{}}{}}{Left}
+:*:tgg8::{{}\color{{}olive{}}{}}{Left}
+:*:tgg9::{{}\color{{}orange{}}{}}{Left}
+
+
+;;;;;;;;;$$$$$$$$$$$$ latex emph$$$$$$$$$$$$$4;;;;;;;
+:*:eew::\emph{{}{}}{Left}
+:*:sse::\sout{{}{}}{Left}
+
+
+
+;;;;Download
+#+2::
+
+    Run "C:\Users\%A_UserName%\Downloads"
+
+return
+
+;;;;;autohotkey
 #+1::
+
     Run %A_ScriptDir%
+
+return
+
+
+$^b::
+KeyWait, Ctrl
+if winactive("ahk_exe Code.exe"){
+	SendInput,{F12}
+}
+else{
+	Sendinput, ^b
+}
+return
+
+$^+b::
+KeyWait, Ctrl
+if winactive("ahk_exe Code.exe"){
+	SendInput,!+{F12}
+}
+else{
+	Sendinput, ^b
+}
 return
 
 
@@ -3101,32 +3274,371 @@ sc1F1::
 	Send, {space}
 return
 
+^+space::
+if WinActive("ahk_exe pycharm64.exe"){
+	SendInput, {F9}
+}
+else if Winactive("ahk_exe SourceTree.exe"){
+	Send, ^+{l}
+}
+else if Winactive("ahk_exe Code.exe"){
+	Send,{F5}
+}
+else{
+	Send, {F12}
+}
+return
+
+
+^space::
+Keywait, Ctrl
+if WinActive("ahk_exe chrome.exe"){
+	MouseClick, left
+	MouseClick, left
+	MouseClick, left
+	Send, ^{c}
+}
+else if WinActive("ahk_exe pycharm64.exe"){
+	Send, ^+{F10}
+}
+else if winactive("ahk_exe Code.exe"){
+	Send,^{F5}
+}
+else if WinActive("ahk_exe pythonw.exe"){
+	Send, {F5}
+}
+else if WinActive("ahk_exe MATLAB.exe"){
+	Send, {F5}
+}
+else if WinActive("ahk_exe texworks.exe"){
+	Send ^{t}
+}
+else if WinActive("ahk_class PPTFrameClass"){
+	Send !{h}
+	Send {g}
+	Send {a}
+	Send {m}
+}
+else if Winactive("ahk_exe SourceTree.exe"){
+	Send, ^+{p}
+}
+else{
+	Send, {F5}
+}
+return
 
 
 #space::
 KeyWait LWin
-if winactive("ahk_exe Code.exe")|| winactive("ahk_exe Code - Insiders.exe") || winactive("ahk_exe VSCodium.exe"){
+if WinActive("ahk_exe chrome.exe"){
+	MouseClick, left
+	MouseClick, left
+	MouseClick, left
+	MouseClick, left
+	Send, ^{v}
+	Send, {Enter}
+}
+else if WinActive("ahk_exe pythonw.exe"){
+	Send, ^+{F12}
+}
+else if WinActive("ahk_exe EXCEL.exe"){
+	MouseClick, left
+	MouseClick, left
+	MouseClick, left
+	Send, ^{v}
+	Send, {Enter}
+}
+else if winactive("ahk_exe Code.exe")|| winactive("ahk_exe Code - Insiders.exe") || winactive("ahk_exe VSCodium.exe"){
 	Send, {F8}
+}
+else{
+	Send, +{F5}
 }
 return
 
+
+;;;;;;;;;$$$$$$$$$$$$$$ matlab $$$$$$$$$$$$$$$$$$$$;;;;;;;;;;;;;;;;;;;
+
+
+!+tab::
+	if WinActive("ahk_exe pycharm64.exe"){
+		Send, !^{i}
+	}
+	else{
+		Send, {Ctrl Down}{i}{Ctrl Up}
+	}
+	
+return
+
+
+
+;~ $F2::
+;~ if WinActive("ahk_exe doublecmd.exe"){
+	
+	;~ Haystack = test.pdf
+	;~ Needle = .
+	;~ StringGetPos, pos, Haystack, %Needle%,R1
+	;~ if pos >= 0
+		;~ MsgBox, The string was found at position %pos%.
+
+	
+	;~ StringMid, HHa, Haystack, 0, %pos%
+	;~ MsgBox, %HHa%
+	
+	;~ Length := StrLen(Haystack)
+	
+	;~ SendInput, {F2}
+	;~ Sleep,200
+	;~ SendInput, ^{c}
+	;~ Sleep,200
+	;~ Needle = .
+	;~ StringGetPos, dotpos, clipboard,%Needle%,R1
+	;~ cllen:=StrLen(clipboard)
+	;~ extlen:=cllen-dotpos
+	;~ MsgBox, %extlen%
+	
+	;~ Loop, %extlen% {
+		;~ SendInput, +{Left}
+		;~ Sleep, 20
+	;~ }
+	
+;~ }
+;~ else{
+	;~ SendInput, {F2}
+;~ }
+;~ return
+
+
+$^+c::
+
+if WinActive("ahk_exe doublecmd.exe") || WinActive("ahk_class TTOTAL_CMD") || WinActive("ahk_exe Explorer.EXE"){
+	Keywait, Shift
+	Keywait, Control
+	if WinActive("ahk_exe doublecmd.exe")|| WinActive("ahk_class TTOTAL_CMD") {
+		Send, ^{F4}
+	}
+	else if WinActive("ahk_exe Explorer.EXE") {
+		SendInput, {LAlt Down}
+		Sleep, 50
+		SendInput, {LAlt Up}
+		Sleep,100
+		Send, {v}
+		Sleep, 100
+		Send, {o}
+		Send, {Enter}
+	}
+	
+	Sleep, 200
+	SendInput, {F2}
+	Sleep,200
+	SendInput, ^{a}
+	Sleep,200
+	SendInput, ^{c}
+	
+	Sleep,200
+	
+	Needle0=_
+	StringGetPos, barpos1, clipboard,%Needle0%,L1
+	StringGetPos, barpos2, clipboard,%Needle0%,L2
+	;~ MsgBox, %barpos1% %barpos2%
+	
+	hasdate:=0
+	if WinActive("ahk_exe doublecmd.exe") {
+		barposth1=9
+		barposth2=14
+	}
+	else if WinActive("ahk_exe Explorer.EXE")|| WinActive("ahk_class TTOTAL_CMD") {
+		barposth1=2
+		barposth2=7
+	}
+	barposth10:=barposth1-1
+	
+	if(barpos1=barposth1)&&(barpos2=barposth2){
+		Strdate1:=SubStr(clipboard, barposth10, 2)
+		
+		if(Strdate1<99)&&(Strdate1>0){
+			hasdate:=1
+		}
+			
+	}
+	
+	
+	if(hasdate=0){
+		if WinActive("ahk_exe doublecmd.exe"){
+			
+			Needle = .
+			Needle2 = ���� (1) 
+			n2len:=StrLen(Needle2)
+			n3len:=n2len+1
+			
+			StringGetPos, dotpos, clipboard,%Needle%,R1
+			StringGetPos, vpos, clipboard,%Needle2%,L1
+			cllen:=StrLen(clipboard)
+			extlen:=cllen-dotpos
+			
+			StringMid,origname, clipboard, %n3len%, %cllen%
+			clipboard=%origname%
+			
+			;~ MsgBox, %clipboard%
+			Sleep,200
+			SendInput, ^{v}
+			
+			Sleep,100
+			
+			Loop, %extlen% {
+				SendInput, {Left}
+				Sleep, 20
+			}
+		}
+		else if WinActive("ahk_exe Explorer.EXE") || WinActive("ahk_class TTOTAL_CMD"){
+			SendInput, {Right}
+			Sleep,50
+			Loop, 6 {
+				SendInput, {BackSpace}
+				Sleep, 20
+			}
+		}
+	}
+	else if(hasdate=1){
+		
+		if WinActive("ahk_exe doublecmd.exe") {
+
+			Needle = .
+			StringGetPos, dotpos, clipboard,%Needle%,R1
+			cllen:=StrLen(clipboard)
+			extlen:=cllen-dotpos
+
+			SendInput, {Home}
+			Sleep, 100
+			
+			Loop, 15 {
+				SendInput, {Del}
+				Sleep, 20
+			}
+			
+			FormatTime, CurrentDateTime,, yy_MMdd_
+			SendInput %CurrentDateTime%
+
+			SendInput, {End}
+			
+			Loop, %extlen% {
+				SendInput, {Left}
+				Sleep, 20
+			}
+
+			
+		}
+		else if WinActive("ahk_exe Explorer.EXE"){
+
+			Loop, 3 {
+				SendInput, {Up}
+				Sleep, 20
+			}
+			SendInput, {Home}
+			
+			Sleep, 100
+			
+			Loop, 8 {
+				SendInput, {Del}
+				Sleep, 20
+			}
+			
+			FormatTime, CurrentDateTime,, yy_MMdd_
+			SendInput %CurrentDateTime%
+				
+			Loop, 3 {
+				SendInput, {Down}
+				Sleep, 20
+			}
+			SendInput, {End}
+			
+			Loop, 6 {
+				SendInput, {BackSpace}
+				Sleep, 20
+			}
+		}
+		
+		else if WinActive("ahk_class TTOTAL_CMD"){
+			Needle = .
+			StringGetPos, dotpos, clipboard,%Needle%,R1
+			cllen:=StrLen(clipboard)
+			extlen:=cllen-dotpos
+			
+			SendInput, {Right}
+			Loop, %extlen% {
+				SendInput, {Left}
+				Sleep, 20
+			}
+			
+			
+			
+			Loop, 6 {
+				SendInput, {BackSpace}
+				Sleep, 20
+			}
+			SendInput, {Home}
+			
+			Loop, 8 {
+				SendInput, {Del}
+				Sleep, 20
+			}
+			
+			FormatTime, CurrentDateTime,, yy_MMdd_
+			SendInput %CurrentDateTime%
+			
+			SendInput, {End}
+						
+			Loop, %extlen% {
+				SendInput, {Left}
+				Sleep, 20
+			}
+
+		}
+	}
+}
+else{
+	SendInput, ^+{c}
+}
+return
 
 #F2::
 	WinMaximize, A
 return
 
 #F3::
+	Sendinput, #{F9}
+	Sendinput, #+{F9}
 	Reload
 return
 
+
+F4::
+	Send, {vk15sc138}
+return
+
+
+
+
+
+;;;;;;;;;$$$$$$$$$$;;;;;;;;;;;;;;;;
 !+1::
 	Keywait, Alt
 	Keywait, Lshift
 	Send, #6
+	;~ Send, #1
+	;~ MsgBox, hellowworld
 return
 
 ^!+1::
 
+	;DetectHiddenWindows, On
+	;If winexist("Todoist"){
+	;	WinActivate
+	;}
+	;else{
+	;	run, Todoist
+	;}
+	
 	SetTitleMatchMode, 2
 	isc1:=1
 	
@@ -3135,17 +3647,36 @@ return
 		isc1:=0
 	}
 	
+	
+	if(isc1=1){
+		KeyWait Control  
+		KeyWait Alt
+		
+		WinActivate, ahk_class Shell_TrayWnd
+
+		KeyWait Control  
+		KeyWait Alt
+		
+		SendInput, {End}
+		SendInput, {Home}
+		
+		BlockInput On
+		Send #T
+		Sleep, 100
+		Loop,15{
+			Send, {right}
+		}
+		Send, {Enter}
+		
+		BlockInput Off
+	}
+	
 return
 
 !+2::
 	Keywait, Alt
 	Keywait, Lshift
-	if WinExist("ahk_exe doublecmd.exe"){
-		WinActivate ahk_exe doublecmd.exe
-	}
-	else{
-		run, C:\Program Files (x86)\Double Commander\doublecmd.exe
-	}
+	Send, #7
 return
 
 !+3::
@@ -3458,7 +3989,7 @@ $!w::
 	if WinActive("Quick Search for Autohotkey"){
 		ControlClick, Button1, Quick Search for Autohotkey
 	}
-	else if WinActive("Google 캘린더"){
+	else if WinActive("Google Ķ����"){
 		Keywait, Ctrl
 		Keywait, Shift
 		SendInput, ^!{3}
@@ -3469,7 +4000,7 @@ $!w::
 return
 
 $!x::
-	if WinActive("Google 캘린더"){
+	if WinActive("Google Ķ����"){
 		Keywait, Ctrl
 		Keywait, Shift
 		SendInput, ^!{4}
