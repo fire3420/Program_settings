@@ -158,7 +158,7 @@
     "python.jediEnabled": false,
     "python.languageServer": "Microsoft",
     "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace",
-    "vsnotes.defaultNotePath": "C:\\Users\\fire3\\OneDrive\\blog_secret\\_posts",
+    "vsnotes.defaultNotePath": "C:\\Users\\fire3\\Desktop\\Jungyong\\blog_secret\\_posts",
     // "vsnotes.defaultNotePath": "/home/john/Jungyong/Projects/gitlab_blog_mysecret/_posts",
     "vsnotes.defaultNoteTitle": "{dt}-memo_{dd}_{title}.{ext}",
     "vsnotes.templates": [
@@ -200,4 +200,18 @@
     ],
     "vsnotes.defaultNoteName": "Note",
     "workbench.colorTheme": "Monokai",
+    "update.enableWindowsBackgroundUpdates": false,
+    "files.autoGuessEncoding": true,
+    // "python.sortImports.args": [
+    //     "-sp isort.cfg"
+    // ],
+    // "[python]": {
+    //     "editor.codeActionsOnSave": {
+    //         "source.organizeImports": true
+    //     }
+    // },
+    "vscode-mysql.resultTheme": "Dark",
+    "vscodeGoogleTranslate.preferredLanguage": "English",
+    "editor.gotoLocation.multipleDefinitions": "gotoAndPeek",
+    "editor.gotoLocation.multipleTypeDefinitions": "gotoAndPeek"
 }
