@@ -526,7 +526,8 @@ return
 
 
 $F10::
-MsgBox, %A_ComputerName%
+	SetTitleMatchMode, 2
+	Winactivate Microsoft​ Edge Beta
 return
 
 
@@ -818,11 +819,20 @@ $p::
 return
 
 $;::
-SetTitleMatchMode, 2
+	SetTitleMatchMode, 2
 
-if winactive("HackMD ") || winactive("ahk_exe Code.exe")|| winactive("ahk_exe Code - Insiders.exe") || winactive("ahk_exe VSCodium.exe"){
-	englishMode()
-}
+	if winactive("HackMD ") || winactive("ahk_exe Code.exe")|| winactive("ahk_exe Code - Insiders.exe") || winactive("ahk_exe VSCodium.exe"){
+		englishMode()
+	}
+
+	; if WinActive("- 개인 -"){
+	; 	Send, {Esc}
+	; 	Send, {Esc}
+	; }
+	; else{
+	; 	send, {Esc}
+	; }
+
 	send, {Esc}
 	SetCapsLockState , AlwaysOff
 return
@@ -1497,9 +1507,14 @@ return
 
 
 $Esc::
-if WinActive("카카오톡")
-	{
-		WinMinimize, A
+	SetTitleMatchMode, 2
+	if WinActive("카카오톡")
+		{
+			WinMinimize, A
+		}
+	else if WinActive("- 개인 -"){
+		Send, {Esc}
+		Send, {Esc}
 	}
 	else{
 		Send, {Esc}
@@ -3713,7 +3728,6 @@ else{
 	send, ^+{g}
 }
 return
-
 
 
 #IfWinActive, ahk_class IEFrame 
