@@ -18,7 +18,7 @@
     ],
     "vim.easymotion": true,
     "vim.easymotionMarkerFontSize": 15,
-    "vim.easymotionMarkerBackgroundColor": "red",
+    "vim.easymotionMarkerBackgroundColor": "blue",
     "vim.useSystemClipboard": true,
     "vim.leader": "\\",
     "vim.normalModeKeyBindingsNonRecursive": [
@@ -148,7 +148,9 @@
         "AMD_jyRL2": "linux",
         "h6_rl2": "linux",
         "hm_tfpredict": "linux",
-        "AMD_jyRL2_win": "linux"
+        "AMD_jyRL2_win": "linux",
+        "AMD_jyRL3": "linux",
+        "HP_jyRL3": "linux"
     },
     "editor.fontSize": 18,
     "editor.suggestSelection": "first",
@@ -197,5 +199,19 @@
         }
     ],
     "vsnotes.defaultNoteName": "Note",
-    "joplin.token": "3aeb2897688cfeb7bde222e30b0b6194527f09c906deed60c825c7cec6809a58557119ce93e85145fb7c43cd4285500700f248a813e67e2ace06022bdafd5434",
+    "workbench.colorTheme": "Monokai",
+    "update.enableWindowsBackgroundUpdates": false,
+    "files.autoGuessEncoding": true,
+    // "python.sortImports.args": [
+    //     "-sp isort.cfg"
+    // ],
+    // "[python]": {
+    //     "editor.codeActionsOnSave": {
+    //         "source.organizeImports": true
+    //     }
+    // },
+    "vscode-mysql.resultTheme": "Dark",
+    "vscodeGoogleTranslate.preferredLanguage": "English",
+    "editor.gotoLocation.multipleDefinitions": "gotoAndPeek",
+    "editor.gotoLocation.multipleTypeDefinitions": "gotoAndPeek"
 }
