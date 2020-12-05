@@ -686,19 +686,9 @@ SetCapsLockState , AlwaysOff
 return
 
 $9::
-SetTitleMatchMode, 2
-if (A_ComputerName == "DESKTOP-B9CNSNS"){
-	WinActivate ahk_exe msedge.exe
-}
-else{
-	if WinExist("Chromium"){
-		WinActivate, Chromium
-	}
-	else{
-		run, C:\Program Files (x86)\Chromium\Application\chrome.exe
-	}
-}
-SetCapsLockState , AlwaysOff
+	SetTitleMatchMode, 2
+	WinActivate Microsoft​ Edge Dev
+	SetCapsLockState , AlwaysOff
 return
 
 $0::
@@ -1783,6 +1773,17 @@ else{
 	SendInput !a
 }
 return
+
+$^s::
+SetTitleMatchMode, 2
+if WinActive("Tasks"){
+	SendInput, !^{j}
+}
+else{
+	SendInput ^s
+}
+return
+
 
 $!z::
 SetTitleMatchMode, 2
@@ -3174,7 +3175,8 @@ return
 		WinActivate ahk_exe doublecmd.exe
 	}
 	else{
-		run, C:\Program Files (x86)\Double Commander\doublecmd.exe
+		run, C:\Program Files\Double Commander\doublecmd.exe
+		; run, C:\Program Files (x86)\Double Commander\doublecmd.exe
 	}
 return
 
@@ -3393,42 +3395,6 @@ $^F3::
 
 return
 
-$^F4::
-	KeyWait, Control
-	
-	capstate := GetKeyState("Capslock", "T")
-	if(capstate){
-		
-		if WinExist("ahk_class Notepad"){
-			GroupActivate NOTEPAD
-		}
-		else{
-			run %windir%\system32\notepad.exe
-			WinWait ahk_class Notepad
-			WinActivate ahk_class Notepad
-		}
-		SetCapsLockState , AlwaysOff
-	}
-	else{
-		if WinActive("ahk_exe Explorer.EXE"){
-			SendInput, {LAlt Down}
-			Sleep, 50
-			SendInput, {LAlt Up}
-			Sleep,100
-			Send, {v}
-			Sleep, 100
-			Send, {o}
-			Send, {Down}
-			Send, {Down}
-			Send, {Down}
-			Send, {Enter}
-		}
-		else{
-			SendInput, ^{F4}
-		}
-	}
-	
-return
 ;;;;;;;;;;;;;$$$$$$$$$$$$$$$$$4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 $!q::
 	if WinActive("Quick Search for Autohotkey"){

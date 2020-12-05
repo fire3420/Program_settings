@@ -954,7 +954,7 @@ if WinActive("ahk_class EVA_Window_Dblclk"){
 	Send,+{Tab}
 	englishMode()
 }
-; else if Winactive("ë‹¤ë¥¸ ì´ë¦„ìœ¼ë¡œ ì €ì¥"){
+; else if Winactive("?‹¤ë¥? ?´ë¦„ìœ¼ë¡? ????¥"){
 ; 	SendInput, {Tab}
 ; 	SendInput, !{n}
 ; }
