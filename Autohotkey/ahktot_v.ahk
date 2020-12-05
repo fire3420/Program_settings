@@ -530,6 +530,10 @@ $F10::
 	Winactivate Microsoft​ Edge Beta
 return
 
+$+F10::
+	MsgBox, %A_ComputerName%
+return
+
 
 $F11::
 
@@ -687,7 +691,7 @@ return
 
 $9::
 SetTitleMatchMode, 2
-if (A_ComputerName == "DESKTOP-B9CNSNS"){
+if (A_ComputerName == "DESKTOP-B9CNSNS") || (A_ComputerName == "DESKTOP-OIC03SD"){
 	WinActivate ahk_exe msedge.exe
 }
 else{
@@ -1023,21 +1027,6 @@ return
 
 return
 
-
-
-
-+Enter::
-	if WinActive("Microsoft To-Do"){
-		Send, {Enter}
-		Sleep,500
-		Send, {Up}
-		Sleep,500
-		Send, {Enter}
-	}
-	else{
-		Send, +{Enter}
-}
-return
 
 
 $!+b::
