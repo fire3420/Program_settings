@@ -653,17 +653,8 @@ return
 $7::
 DetectHiddenWindows, On
 SetTitleMatchMode, 2
-If WinExist("Jungyong's Record"){
-	WinActivate, ahk_exe ahkgui.exe
-}
-else if WinExist("pygdocseditor2"){
-	WinActivate, pygdocseditor2
-}
-else if WinExist("Edit Gdocs address"){
-	WinActivate, Edit Gdocs address
-}
-else{
-run, %A_ScriptDir%\\run_pygdocs.ahk
+if WinExist("ahk_exe Discord.exe"){
+	Winactivate, ahk_exe Discord.exe
 }
 SetCapsLockState , AlwaysOff
 return
