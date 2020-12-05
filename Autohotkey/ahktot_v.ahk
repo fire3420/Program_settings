@@ -530,6 +530,10 @@ $F10::
 	Winactivate Microsoft​ Edge Beta
 return
 
+$+F10::
+	MsgBox, %A_ComputerName%
+return
+
 
 $F11::
 
@@ -1004,21 +1008,6 @@ return
 
 return
 
-
-
-
-+Enter::
-	if WinActive("Microsoft To-Do"){
-		Send, {Enter}
-		Sleep,500
-		Send, {Up}
-		Sleep,500
-		Send, {Enter}
-	}
-	else{
-		Send, +{Enter}
-}
-return
 
 
 $!+b::
