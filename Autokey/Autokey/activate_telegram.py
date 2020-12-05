@@ -10,5 +10,5 @@ def winexists(target):
     return False
     
 if(winexists("Telegram")):
-    window.activate('Telegram.TelegramDesktop', switchDesktop=True, matchClass=True)
+    window.activate('Telegram', switchDesktop=True, matchClass=False)
 
