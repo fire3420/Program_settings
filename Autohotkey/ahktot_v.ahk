@@ -1247,9 +1247,6 @@ return
 	}
 return
 
-F6::
-	Send, {/}
-return
 
 ^+F6::
 	Send, {|}
