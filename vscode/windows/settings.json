@@ -154,7 +154,8 @@
         "HM_rl3": "linux",
         "RTL": "linux",
         "HM_cd": "linux",
-        "h6_rl3": "linux"
+        "h6_rl3": "linux",
+        "AMD_coding": "linux"
     },
     "editor.fontSize": 18,
     "editor.suggestSelection": "first",
@@ -221,5 +222,12 @@
     "vscodeGoogleTranslate.preferredLanguage": "English",
     "editor.gotoLocation.multipleDefinitions": "gotoAndPeek",
     "editor.gotoLocation.multipleTypeDefinitions": "gotoAndPeek",
-    "joplin.token": "4d712c571a2a18cf997ee2ac45ee0a8772fb5eb787e8170b70812895fd55abb7f03d4f73154d75e8f9e073019ae8775d2c468c1c17fb1d88aef599aaecbb5c54"
+    "joplin.token": "4d712c571a2a18cf997ee2ac45ee0a8772fb5eb787e8170b70812895fd55abb7f03d4f73154d75e8f9e073019ae8775d2c468c1c17fb1d88aef599aaecbb5c54",
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter-notebook",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "python.insidersChannel": "weekly"
 }

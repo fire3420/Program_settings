@@ -682,7 +682,12 @@ return
 
 $9::
 	SetTitleMatchMode, 2
-	WinActivate Microsoft​ Edge Dev
+	if Winexist("Microsoft​ Edge Dev"){
+		WinActivate Microsoft​ Edge Dev
+	}
+	else{
+		run, "C:\Program Files (x86)\Microsoft\Edge Dev\Application\msedge.exe"
+	}
 	SetCapsLockState , AlwaysOff
 return
 
@@ -2773,43 +2778,6 @@ else{
 }
 return
 
-^!v::
-
-	isc1:=1
-
-	
-	if Winexist("ahk_exe ALPDF.exe"){
-		GroupActivate, ALPDF, r
-		isc1:=0
-	}
-	
-	
-	if(isc1=1){
-			
-		KeyWait Control 
-		KeyWait Alt
-		
-		WinActivate, ahk_class Shell_TrayWnd
-
-
-		KeyWait Control 
-		KeyWait Alt
-		
-		SendInput, {End}
-		SendInput, {Home}
-		
-		BlockInput On
-		Send #T
-		Sleep, 100
-		Loop,16{
-			Send, {right}
-		}
-		Send, {Enter}
-		
-		BlockInput Off
-	}
-
-return
 
 
 ^!a::
