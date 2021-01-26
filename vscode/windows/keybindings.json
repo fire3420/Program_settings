@@ -123,4 +123,10 @@
         "command": "bookmarks.jumpToPrevious",
         "when": "editorTextFocus"
     },
+    {
+        "key": "escape",
+        "command": "notebook.cell.quitEdit",
+        "when": "inputFocus && notebookEditorFocused && !editorHasSelection && !editorHoverVisible && vim.active && vim.mode == 'Normal'"
+    },
+
 ]

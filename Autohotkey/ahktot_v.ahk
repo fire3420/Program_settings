@@ -532,7 +532,6 @@ return
 
 $+F10::
 	MsgBox, %A_ComputerName%
-	
 return
 
 
@@ -658,17 +657,8 @@ return
 $7::
 DetectHiddenWindows, On
 SetTitleMatchMode, 2
-If WinExist("Jungyong's Record"){
-	WinActivate, ahk_exe ahkgui.exe
-}
-else if WinExist("pygdocseditor2"){
-	WinActivate, pygdocseditor2
-}
-else if WinExist("Edit Gdocs address"){
-	WinActivate, Edit Gdocs address
-}
-else{
-run, %A_ScriptDir%\\run_pygdocs.ahk
+if WinExist("ahk_exe Discord.exe"){
+	Winactivate, ahk_exe Discord.exe
 }
 SetCapsLockState , AlwaysOff
 return
@@ -691,19 +681,14 @@ SetCapsLockState , AlwaysOff
 return
 
 $9::
-SetTitleMatchMode, 2
-if (A_ComputerName == "DESKTOP-B9CNSNS"){
-	Sendinput, #{2}
-}
-else{
-	if WinExist("Chromium"){
-		WinActivate, Chromium
+	SetTitleMatchMode, 2
+	if Winexist("Microsoft​ Edge Dev"){
+		WinActivate Microsoft​ Edge Dev
 	}
 	else{
-		run, C:\Program Files (x86)\Chromium\Application\chrome.exe
+		run, "C:\Program Files (x86)\Microsoft\Edge Dev\Application\msedge.exe"
 	}
-}
-SetCapsLockState , AlwaysOff
+	SetCapsLockState , AlwaysOff
 return
 
 $0::
@@ -1028,21 +1013,6 @@ return
 
 return
 
-
-
-
-+Enter::
-	if WinActive("Microsoft To-Do"){
-		Send, {Enter}
-		Sleep,500
-		Send, {Up}
-		Sleep,500
-		Send, {Enter}
-	}
-	else{
-		Send, +{Enter}
-}
-return
 
 
 $!+b::
@@ -1785,6 +1755,17 @@ else{
 	SendInput !a
 }
 return
+
+$^s::
+SetTitleMatchMode, 2
+if WinActive("Tasks"){
+	SendInput, !^{j}
+}
+else{
+	SendInput ^s
+}
+return
+
 
 $!z::
 SetTitleMatchMode, 2
@@ -2794,43 +2775,6 @@ else{
 }
 return
 
-^!v::
-
-	isc1:=1
-
-	
-	if Winexist("ahk_exe ALPDF.exe"){
-		GroupActivate, ALPDF, r
-		isc1:=0
-	}
-	
-	
-	if(isc1=1){
-			
-		KeyWait Control 
-		KeyWait Alt
-		
-		WinActivate, ahk_class Shell_TrayWnd
-
-
-		KeyWait Control 
-		KeyWait Alt
-		
-		SendInput, {End}
-		SendInput, {Home}
-		
-		BlockInput On
-		Send #T
-		Sleep, 100
-		Loop,16{
-			Send, {right}
-		}
-		Send, {Enter}
-		
-		BlockInput Off
-	}
-
-return
 
 
 ^!a::
@@ -3176,7 +3120,8 @@ return
 		WinActivate ahk_exe doublecmd.exe
 	}
 	else{
-		run, C:\Program Files (x86)\Double Commander\doublecmd.exe
+		run, C:\Program Files\Double Commander\doublecmd.exe
+		; run, C:\Program Files (x86)\Double Commander\doublecmd.exe
 	}
 return
 
@@ -3395,42 +3340,6 @@ $^F3::
 
 return
 
-$^F4::
-	KeyWait, Control
-	
-	capstate := GetKeyState("Capslock", "T")
-	if(capstate){
-		
-		if WinExist("ahk_class Notepad"){
-			GroupActivate NOTEPAD
-		}
-		else{
-			run %windir%\system32\notepad.exe
-			WinWait ahk_class Notepad
-			WinActivate ahk_class Notepad
-		}
-		SetCapsLockState , AlwaysOff
-	}
-	else{
-		if WinActive("ahk_exe Explorer.EXE"){
-			SendInput, {LAlt Down}
-			Sleep, 50
-			SendInput, {LAlt Up}
-			Sleep,100
-			Send, {v}
-			Sleep, 100
-			Send, {o}
-			Send, {Down}
-			Send, {Down}
-			Send, {Down}
-			Send, {Enter}
-		}
-		else{
-			SendInput, ^{F4}
-		}
-	}
-	
-return
 ;;;;;;;;;;;;;$$$$$$$$$$$$$$$$$4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 $!q::
 	if WinActive("Quick Search for Autohotkey"){
