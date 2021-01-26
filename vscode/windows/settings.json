@@ -150,7 +150,11 @@
         "hm_tfpredict": "linux",
         "AMD_jyRL2_win": "linux",
         "AMD_jyRL3": "linux",
-        "HP_jyRL3": "linux"
+        "HP_jyRL3": "linux",
+        "HM_rl3": "linux",
+        "RTL": "linux",
+        "HM_cd": "linux",
+        "h6_rl3": "linux"
     },
     "editor.fontSize": 18,
     "editor.suggestSelection": "first",
@@ -159,6 +163,7 @@
     "python.languageServer": "Microsoft",
     "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace",
     "vsnotes.defaultNotePath": "C:\\Users\\fire3\\Desktop\\Jungyong\\blog_secret\\_posts",
+    // "vsnotes.defaultNotePath": "C:\\Users\\fire3\\Desktop\\Jungyong\\_posts_markdown",
     // "vsnotes.defaultNotePath": "/home/john/Jungyong/Projects/gitlab_blog_mysecret/_posts",
     "vsnotes.defaultNoteTitle": "{dt}-memo_{dd}_{title}.{ext}",
     "vsnotes.templates": [
@@ -171,6 +176,8 @@
         "6unclassified",
         "7automation",
         "9diary",
+        "10real_est",
+        "11work",
     ],
     "vsnotes.tokens": [
         {
@@ -213,5 +220,12 @@
     "vscode-mysql.resultTheme": "Dark",
     "vscodeGoogleTranslate.preferredLanguage": "English",
     "editor.gotoLocation.multipleDefinitions": "gotoAndPeek",
-    "editor.gotoLocation.multipleTypeDefinitions": "gotoAndPeek"
+    "editor.gotoLocation.multipleTypeDefinitions": "gotoAndPeek",
+    "joplin.token": "4d712c571a2a18cf997ee2ac45ee0a8772fb5eb787e8170b70812895fd55abb7f03d4f73154d75e8f9e073019ae8775d2c468c1c17fb1d88aef599aaecbb5c54",
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ]
 }

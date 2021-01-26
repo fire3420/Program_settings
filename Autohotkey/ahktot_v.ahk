@@ -530,6 +530,11 @@ $F10::
 	Winactivate Microsoft​ Edge Beta
 return
 
+$+F10::
+	MsgBox, %A_ComputerName%
+	
+return
+
 
 $F11::
 
@@ -688,7 +693,7 @@ return
 $9::
 SetTitleMatchMode, 2
 if (A_ComputerName == "DESKTOP-B9CNSNS"){
-	WinActivate ahk_exe msedge.exe
+	Sendinput, #{2}
 }
 else{
 	if WinExist("Chromium"){
@@ -1277,9 +1282,6 @@ return
 	}
 return
 
-F6::
-	Send, {/}
-return
 
 ^+F6::
 	Send, {|}
