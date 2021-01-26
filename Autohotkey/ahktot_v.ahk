@@ -682,7 +682,11 @@ return
 
 $9::
 	SetTitleMatchMode, 2
-	if Winexist("Microsoft​ Edge Dev"){
+
+	if (A_ComputerName == "DESKTOP-B9CNSNS"){
+		WinActivate ahk_exe msedge.exe
+	}
+	else if Winexist("Microsoft​ Edge Dev"){
 		WinActivate Microsoft​ Edge Dev
 	}
 	else{
