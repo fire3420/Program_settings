@@ -530,6 +530,11 @@ $F10::
 	Winactivate Microsoft​ Edge Beta
 return
 
+$F9::
+	SetTitleMatchMode, 2
+	Winactivate 알람 및 시계
+return
+
 $+F10::
 	MsgBox, %A_ComputerName%
 return
@@ -815,7 +820,7 @@ return
 $;::
 	SetTitleMatchMode, 2
 
-	if winactive("HackMD ") || winactive("ahk_exe Code.exe")|| winactive("ahk_exe Code - Insiders.exe") || winactive("ahk_exe VSCodium.exe"){
+	if winactive("HackMD ") || winactive("ahk_exe Code.exe")|| winactive("ahk_exe Code - Insiders.exe") || winactive("ahk_exe VSCodium.exe") || winactive("JupyterLab"){
 		englishMode()
 	}
 
@@ -3529,14 +3534,6 @@ else{
 }
 return
 
-$!+;::
-if WinActive("ahk_exe MATLAB.exe"){
-	SendInput {;}
-}
-else{
-	SendInput {;}
-}
-return
 
 
 F1::

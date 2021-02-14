@@ -14,6 +14,14 @@
             "after": [
                 "<Esc>"
             ]
+        },
+        {
+            "before": [
+                "<A-j>",
+            ],
+            "after": [
+                "<Esc>"
+            ]
         }
     ],
     "vim.easymotion": true,
@@ -155,13 +163,14 @@
         "RTL": "linux",
         "HM_cd": "linux",
         "h6_rl3": "linux",
-        "AMD_coding": "linux"
+        "AMD_coding": "linux",
+        "AMD_rapids": "linux",
+        "HANJOON": "linux"
     },
     "editor.fontSize": 18,
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "python.jediEnabled": false,
-    "python.languageServer": "Microsoft",
+    "python.languageServer": "Pylance",
     "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace",
     "vsnotes.defaultNotePath": "C:\\Users\\fire3\\Desktop\\Jungyong\\blog_secret\\_posts",
     // "vsnotes.defaultNotePath": "C:\\Users\\fire3\\Desktop\\Jungyong\\_posts_markdown",
@@ -225,16 +234,10 @@
     "joplin.token": "4d712c571a2a18cf997ee2ac45ee0a8772fb5eb787e8170b70812895fd55abb7f03d4f73154d75e8f9e073019ae8775d2c468c1c17fb1d88aef599aaecbb5c54",
     "workbench.editorAssociations": [
         {
-<<<<<<< HEAD
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ]
-=======
             "viewType": "jupyter-notebook",
             "filenamePattern": "*.ipynb"
         }
     ],
-    "python.insidersChannel": "weekly"
->>>>>>> 512a43f2ba0ad128a436f483f177c29408c0fc4e
+    "python.insidersChannel": "weekly",
+    "jupyter.askForKernelRestart": false,
 }
