@@ -49,6 +49,7 @@ GroupAdd, CODE, ahk_exe Code.exe
 GroupAdd, CODEINSIDE, ahk_exe Code - Insiders.exe
 GroupAdd, CODIUM, ahk_exe VSCodium.exe
 GroupAdd, POWERSHELL, ahk_exe powershell.exe
+GroupAdd, NOTION, ahk_exe Notion.exe
 
 
 toEncode :=	[" ","%", """", "#", "&"
@@ -527,7 +528,8 @@ return
 
 $F10::
 	SetTitleMatchMode, 2
-	Winactivate Microsoft​ Edge Beta
+	GroupActivate NOTION
+	; Winactivate ahk_exe Notion.exe
 return
 
 $F9::
