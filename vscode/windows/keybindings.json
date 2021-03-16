@@ -128,5 +128,10 @@
         "command": "notebook.cell.quitEdit",
         "when": "inputFocus && notebookEditorFocused && !editorHasSelection && !editorHoverVisible && vim.active && vim.mode == 'Normal'"
     },
+    {
+        "key": "alt+oem_1",
+        "command": "extension.vim_escape",
+        "when": "editorTextFocus && vim.active && !inDebugRepl"
+    },
 
 ]
