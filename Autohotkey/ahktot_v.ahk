@@ -85,7 +85,7 @@ return
 
 $+3::
 SetTitleMatchMode, 2
-if WinActive("Google 캘린더"){
+if WinActive("Google Calendar"){
 	Keywait, Shift
 	SendInput,!^{p}
 }
@@ -510,7 +510,7 @@ return
 
 $F5::
 SetTitleMatchMode, 2
-if Winactive("Chromium") || winactive("ahk_exe msedge.exe"){
+if Winactive("Chromium") || winactive("ahk_exe msedge.exe") || Winactive("ahk_exe chrome.exe"){
 	englishMode()
 	;~ BlockInput on
 	Sleep,200
@@ -528,8 +528,14 @@ return
 
 $F10::
 	SetTitleMatchMode, 2
-	GroupActivate NOTION
-	; Winactivate ahk_exe Notion.exe
+
+	if Winexist("ahk_exe Notion.exe"){
+		GroupActivate NOTION
+	}
+	else{
+		run, C:\Users\%A_UserName%\AppData\Local\Programs\Notion\Notion.exe
+	}
+
 return
 
 $F9::
@@ -1759,7 +1765,7 @@ SetTitleMatchMode, 2
 if WinActive("Tasks"){
 	SendInput, !^{h}
 }
-else if WinActive("Google 캘린더"){
+else if WinActive("Google Calendar"){
 	SendInput, !^{h}
 }
 else{
@@ -1793,7 +1799,7 @@ SetTitleMatchMode, 2
 if WinActive("Tasks"){
 	SendInput, ^!{n}
 }
-else if WinActive("Google 캘린더"){
+else if WinActive("Google Calendar"){
 	Keywait, Alt
 	SendInput, ^!{6}
 }
@@ -2125,7 +2131,7 @@ if WinActive("Tasks"){
 		Send,+{Tab}
 	}
 }
-else if WinActive("Google 캘린더"){
+else if WinActive("Google Calendar"){
 	SendInput,^!{5}
 }
 else if WinActive("ahk_exe pycharm64.exe"){
@@ -2185,7 +2191,7 @@ return
 
 $!f::
 SetTitleMatchMode, 2
-if WinActive("Google 캘린더"){
+if WinActive("Google Calendar"){
 	Send, !^{5}
 }
 else if Winactive("Spyder"){
@@ -2203,7 +2209,7 @@ return
 
 $!g::
 SetTitleMatchMode, 2
-if WinActive("Google 캘린더"){
+if WinActive("Google Calendar"){
 	SendInput,!^{b}
 }
 else{
@@ -2221,7 +2227,7 @@ if WinActive("Tasks"){
 	Sleep,200
 	Send,+{Tab}
 }
-else if Winactive("Google 캘린더"){
+else if Winactive("Google Calendar"){
 	SendInput,^!{2}
 }
 else if Winactive("Spyder"){
@@ -2285,7 +2291,7 @@ else if WinActive("ahk_exe MATLAB.exe"){
 else if WinActive("ahk_exe SciTE.exe"){
 	Send, ^{q}
 }
-else if WinActive("Google 캘린더"){
+else if WinActive("Google Calendar"){
 
 	If WinExist("Tasks"){
 		WinActivate
@@ -2383,7 +2389,7 @@ else{
 return
 
 ^+`::
-if WinActive("Google 캘린더"){
+if WinActive("Google Calendar"){
 	CoordMode, Mouse, Client
 	SplashImage, WAITSign.jpg
 	MouseClick, left, 344, 222,2
@@ -2748,7 +2754,7 @@ else if WinActive("Tasks"){
 	Send,+{Tab}
 	BlockInput Off
 }
-else if WinActive("Google 캘린더"){
+else if WinActive("Google Calendar"){
 	Keywait, Ctrl
 	Keywait, Shift
 	SendInput, ^!{1}
@@ -2768,7 +2774,7 @@ else if WinActive("ahk_exe matlab.exe"){
 	Send, ^{0}
 	Send, ^{Tab}
 }
-else if WinActive("Google 캘린더"){
+else if WinActive("Google Calendar"){
 	Send, !^{7}
 }
 else{
@@ -2778,7 +2784,7 @@ return
 
 $!b::
 SetTitleMatchMode, 2
-if WinActive("Google 캘린더"){
+if WinActive("Google Calendar"){
 	Send, !^{8}
 }
 else{
@@ -2792,8 +2798,8 @@ return
 	SetTitleMatchMode, 2	
 	
 
-	if Winexist("Google 캘린더"){
-		WinActivate Google 캘린더
+	if Winexist("Google Calendar"){
+		WinActivate Google Calendar
 	}
 	else{
 		KeyWait Control 
@@ -3410,7 +3416,7 @@ $!w::
 	if WinActive("Quick Search for Autohotkey"){
 		ControlClick, Button1, Quick Search for Autohotkey
 	}
-	else if WinActive("Google 캘린더"){
+	else if WinActive("Google Calendar"){
 		Keywait, Ctrl
 		Keywait, Shift
 		SendInput, ^!{3}
@@ -3421,7 +3427,7 @@ $!w::
 return
 
 $!x::
-	if WinActive("Google 캘린더"){
+	if WinActive("Google Calendar"){
 		Keywait, Ctrl
 		Keywait, Shift
 		SendInput, ^!{4}
