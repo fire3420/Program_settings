@@ -162,6 +162,25 @@ $c::
 	SetCapsLockState , AlwaysOff
 return
 
+
+$y::
+	SetTitleMatchMode, 2
+	
+	Loop, 200{
+    Click, WheelDown
+	}
+	SetCapsLockState , AlwaysOff
+return
+
+$u::
+	SetTitleMatchMode, 2
+	
+	Loop, 200{
+    Click, WheelUp
+	}
+	SetCapsLockState , AlwaysOff
+return
+
 $g::
 	;~ Keywait, CapsLock
 	SetTitleMatchMode, 2
@@ -312,16 +331,6 @@ $n::
 return
 
 
-
-$y::
-	SetCapsLockState , AlwaysOff
-	if WinExist("ahk_exe search_v.exe"){
-		WinActivate ahk_exe search_v.exe
-	}
-	else{
-		run %A_ScriptDir%\search_v.exe
-	}
-return
 
 $^k::
 	Sendinput, {LCtrl Down}{Up}{LCtrl Up}
@@ -530,7 +539,7 @@ $F10::
 	SetTitleMatchMode, 2
 
 	if Winexist("ahk_exe Notion.exe"){
-		GroupActivate NOTION
+		GroupActivate NOTION, r
 	}
 	else{
 		run, C:\Users\%A_UserName%\AppData\Local\Programs\Notion\Notion.exe
