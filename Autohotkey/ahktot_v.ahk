@@ -50,7 +50,7 @@ GroupAdd, CODEINSIDE, ahk_exe Code - Insiders.exe
 GroupAdd, CODIUM, ahk_exe VSCodium.exe
 GroupAdd, POWERSHELL, ahk_exe powershell.exe
 GroupAdd, NOTION, ahk_exe Notion.exe
-
+GroupAdd, CHROME_BROWSER, ahk_exe chrome.exe
 
 toEncode :=	[" ","%", """", "#", "&"
  , "/", ":", ";", "<"
@@ -378,15 +378,15 @@ $o::
 return
 
 
-$!q::
-	SendInput, ^{Left}
-	SetCapsLockState , AlwaysOff
-return
+; $!q::
+; 	SendInput, ^{Left}
+; 	SetCapsLockState , AlwaysOff
+; return
 
-$!e::
-	SendInput, ^{Right}
-	SetCapsLockState , AlwaysOff
-return
+; $!e::
+; 	SendInput, ^{Right}
+; 	SetCapsLockState , AlwaysOff
+; return
 
 $s::
 	SendInput, {Home}
@@ -557,12 +557,6 @@ $+F10::
 return
 
 
-$F11::
-
-return
-
-
-
 
 $!F10::
 Send, {Media_Play_Pause}
@@ -606,44 +600,12 @@ $+F1::
 return
 
 
-$!F1::
-	SetCapsLockState , AlwaysOff
-	if winactive("pygdocseditor") || winactive("pygdocdiary"){
-		WinMinimize
-	}
-	else{
-	Send, !{F4}
-	}
-return
-
 $a::
 	if WinActive("ahk_exe doublecmd.exe"){
 		Send, {Left}
 	}
 	else if WinActive("ahk_class TTOTAL_CMD"){
 		Send, ^{PgUp}
-	}
-	else if Winactive("Spyder"){
-		SendInput, ^+{x}
-		Loop,2{
-			Sleep, 30
-			SendInput, {Tab}
-		}
-		Sleep,30
-		SendInput, {Space}
-		Sleep,30
-		SendInput, ^+{x}
-	}
-	else if WinActive("ahk_exe MATLAB.exe"){
-		Keywait, Alt
-		BlockInput On
-		exclip:=Clipboard
-		SendInput, ^{0}
-		englishMode()
-		SendInput, cd ..
-		Sleep,100
-		SendInput, {Enter}
-		BlockInput Off
 	}
 	else if winactive("ahk_class PuTTY") || winactive("ahk_class KiTTY") || winactive("ahk_exe MobaXterm.exe"){
 		Send, cd ..
@@ -665,6 +627,11 @@ Send, {Backspace}
 SetCapsLockState , AlwaysOff
 return
 
+$#`::
+	SendInput, ``
+return
+
+
 $!`::
 Send, !{Left}
 SetCapsLockState , AlwaysOff
@@ -676,7 +643,7 @@ SetCapsLockState , AlwaysOff
 return
 
 
-$7::
+$8::
 DetectHiddenWindows, On
 SetTitleMatchMode, 2
 if WinExist("ahk_exe Discord.exe"){
@@ -686,10 +653,13 @@ SetCapsLockState , AlwaysOff
 return
 
 
-$8::
+$7::
 	SetTitleMatchMode, 2
 	if WinExist("ahk_exe Telegram.exe"){
 		Winactivate, ahk_exe Telegram.exe
+	}
+	else{
+		run, C:\Users\%A_UserName%\AppData\Roaming\Telegram Desktop\Telegram.exe
 	}
 SetCapsLockState , AlwaysOff
 return
@@ -727,13 +697,18 @@ $0::
 SetCapsLockState , AlwaysOff
 return
 
-$F12::
+$#0::
 	if Winexist("ahk_exe Code - Insiders.exe"){
 			GroupActivate, CODEINSIDE, r
 	}
 	else{
 		run, code-insiders, ,Hide
 	}
+SetCapsLockState , AlwaysOff
+return
+
+$!e::
+	Sendinput, !{F4}
 SetCapsLockState , AlwaysOff
 return
 
@@ -957,22 +932,6 @@ HideTrayTip() {
 RETURN
 
 
-
-#+q::
-	KeyWait, LWin
-	KeyWait, Shift
-	
-	Sleep 50
-    CoordMode,Mouse,Screen
-    WinGetPos, winTopL_x, winTopL_y, width, height, A
-    winCenter_x := winTopL_x + width/2
-    winCenter_y := winTopL_y + height/2
-    ;MouseMove, X, Y, 0 ; does not work with multi-monitor
-    DllCall("SetCursorPos", int, winCenter_x, int, winCenter_y)
-    ;Tooltip winTopL_x:%winTopL_x% winTopL_y:%winTopL_y% winCenter_x:%winCenter_x% winCenter_y:%winCenter_y%
-return
-
-
 $!n::
 
 if WinActive("ahk_class EVA_Window_Dblclk"){
@@ -1091,27 +1050,10 @@ return
 	Send, {Esc}
 return
 
-#+r::
-	edit
-return
 
 #+t::
 run, C:\Program Files\AutoHotkey\Windowspy.ahk
 return
-
-#+a::
-	Keywait, Shift
-	Keywait, LWin
-	BlockInput,on
-	Send, #+{Right}
-	Sleep,300
-	WinMaximize, A
-	Send, #{Down}
-	Sleep,300
-	WinMaximize, A
-	BlockInput,off
-return
-
 
 $#b::
 	SendInput, #{b}
@@ -1178,6 +1120,42 @@ return
 #s::
 	if(!Winactive("ahk_exe SearchUI.exe")){
 		Send, #{Right}
+		Sleep 100
+		if(iswinkey==1){
+		Send, {Enter}
+		Sleep 100
+		Send, {Esc}
+		}
+		
+	}
+return
+
+$#+s::
+	if(!Winactive("ahk_exe SearchUI.exe")){
+		Send, #{Right}
+		Sleep 100
+		if(iswinkey==1){
+		Send, {Enter}
+		Sleep 100
+		Send, {Esc}
+		}
+		
+	}
+return
+
+$^#+4::
+	Send #+s
+return
+
+$#+q::
+	if(!Winactive("ahk_exe SearchUI.exe")){
+		WinMaximize, A
+	}
+return
+
+$#+a::
+	if(!Winactive("ahk_exe SearchUI.exe")){
+		Send, #{Left}
 		Sleep 100
 		if(iswinkey==1){
 		Send, {Enter}
@@ -1673,36 +1651,6 @@ return
 	
 return
 
-!#x::
-SetTitleMatchMode, 2
-	if WinActive("Microsoft To-Do"){
-		CoordMode, Mouse, Client
-		MouseGetPos, xpos, ypos 
-		
-		DPIsize:=checkDPIsize()
-		Dpiconv:=DPIsize/96
-		xx:=394*Dpiconv
-		yy:=ypos
-		MouseMove, xx, yy
-	}
-	
-	else if WinActive("Todoist"){
-		
-		CoordMode, Mouse, Client
-		MouseGetPos, xpos, ypos 
-		
-		DPIsize:=checkDPIsize()
-		Dpiconv:=DPIsize/96
-		xx:=535*Dpiconv
-		yy:=ypos
-		
-		MouseMove, xx, yy
-	}
-	
-	Loop, 5{
-    Click, WheelDown
-	}
-return
 
 #PgDn::
 	Loop, 5{
@@ -1882,6 +1830,23 @@ return
 		Send, ^{NumpadSub}
 	}
 return
+
+$#`::
+
+	if Winactive("Chromium") {
+		GroupActivate, CHROME_BROWSER, r
+	}
+	else if Winactive("ahk_exe Notion.exe"){
+		GroupActivate, NOTION, r
+	}
+
+SetTitleMatchMode, 2
+return
+
+$`::
+	SendInput, {Enter}
+return
+
 
 $^1::
 SetTitleMatchMode, 2
@@ -2397,39 +2362,6 @@ else{
 }
 return
 
-^+`::
-if WinActive("Google Calendar"){
-	CoordMode, Mouse, Client
-	SplashImage, WAITSign.jpg
-	MouseClick, left, 344, 222,2
-	Sleep,100
-	BlockInput on
-	Send,^!{,}
-	Sleep,100	
-	Send,+{Tab}
-	Sleep,100
-	Send,+{Tab}
-	Sleep,100
-	Send,{Enter}
-	Sleep,100
-	Loop,1{
-		Send,{Down}
-		Sleep,100
-	}
-	Send,{Enter}
-	Sleep,2500
-	Loop,5{
-		Send,{Tab}
-		Sleep,100
-	}
-	SplashImage, Off
-	BlockInput off
-}
-else{
-	Sendinput, ^+{`}
-}
-
-return
 
 $^+2::
 if WinActive("ahk_exe notepad++.exe"){
@@ -2528,15 +2460,10 @@ return
 
 
 !+z::
-	isc1:=1
-
-	if winexist("ahk_exe VSCodium.exe"){
-		GroupActivate, CODIUM
+	if Winexist("카카오톡"){
+		WinActivate, 카카오톡
+		isc1:=0
 	}
-	else{
-		run, codium
-	}
-
 return
 
 !+x::
@@ -2644,71 +2571,11 @@ return
 	}
 return
 
-^!z::
-
-	isc1:=1
-	
-	DetectHiddenWindows, Off
-	if Winexist("카카오톡"){
-		;~ GroupActivate, KAKAO, r
-		WinActivate, 카카오톡
-		isc1:=0
-	}
-	if(isc1=1){
-		KeyWait Control 
-		KeyWait Alt
-		WinActivate, ahk_class Shell_TrayWnd
-
-		KeyWait Control 
-		KeyWait Alt
-		
-		SendInput, {End}
-		SendInput, {Home}
-		
-		BlockInput On
-		Send #T
-		Sleep, 100
-		Loop,13{
-			Send, {right}
-		}
-		Send, {Enter}
-		
-		BlockInput Off
-	}
-
-
-return
 
 ^!x::	
-	isc1:=1
-	
 	if Winexist("ahk_exe Hwp.exe"){
 		GroupActivate, HWP, r
 		isc1:=0
-	}
-
-	
-	if(isc1=1){
-		KeyWait Control  
-		KeyWait Alt
-		
-		WinActivate, ahk_class Shell_TrayWnd
-
-		KeyWait Control  
-		KeyWait Alt
-		
-		SendInput, {End}
-		SendInput, {Home}
-		
-		BlockInput On
-		Send #T
-		Sleep, 100
-		Loop,14{
-			Send, {right}
-		}
-		Send, {Enter}
-		
-		BlockInput Off
 	}
 return
 
@@ -2875,116 +2742,6 @@ $^!s::
 
 return
 
-^!d::
-
-	SetTitleMatchMode, 2
-	isc1:=1
-	
-		if Winexist("Google 문서"){
-			GroupActivate, GDOC, r
-			isc1:=0
-		}
-	
-	
-	if(isc1=1){
-		KeyWait Control  
-		KeyWait Alt
-		KeyWait Shift
-		
-		WinActivate, ahk_class Shell_TrayWnd
-
-		KeyWait Control  
-		KeyWait Alt
-		KeyWait Shift
-		
-		SendInput, {End}
-		SendInput, {Home}
-		
-		
-		BlockInput On
-		Send #T
-		Sleep, 100
-		Loop,19{
-			Send, {right}
-		}
-		Send, {Enter}
-		
-		BlockInput Off
-	}
-return
-
-$^!f::
-
-	isc1:=1
-	DetectHiddenWindows, On
-	if Winexist("ahk_exe SciTE.exe"){
-		GroupActivate, SCITE
-		isc1:=0
-	}
-		
-	if(isc1=1){
-		KeyWait Control 
-		KeyWait Alt
-		KeyWait Shift
-		
-		WinActivate, ahk_class Shell_TrayWnd
-
-		KeyWait Control 
-		KeyWait Alt
-		KeyWait Shift
-		
-		SendInput, {End}
-		SendInput, {Home}
-		
-		
-		BlockInput On
-		Send #T
-		Sleep, 100
-		Loop,20{
-			Send, {right}
-		}
-		Send, {Enter}
-		
-		BlockInput Off
-	}
-return
-
-^#!a::
-
-	isc1:=1
-	;~ if(A_ComputerName = "DESKTOP-K7S692N")||(A_ComputerName = "DESKTOP-K7L6GIG")||(A_ComputerName = "DESKTOP-MHBO4SK")||(A_ComputerName = "DESKTOP-MTCBFE6") {
-		if Winexist("ahk_exe SourceTree.exe"){
-			WinActivate Sourcetree
-			isc1:=0
-		}
-	;~ }
-	
-	if(isc1=1){
-		KeyWait Control 
-		KeyWait Alt
-		KeyWait Shift
-		
-		WinActivate, ahk_class Shell_TrayWnd
-
-		KeyWait Control 
-		KeyWait Alt
-		KeyWait Shift
-		
-		SendInput, {End}
-		SendInput, {Home}
-		
-		
-		BlockInput On
-		Send #T
-		Sleep, 100
-		Loop,21{
-			Send, {right}
-		}
-		Send, {Enter}
-		
-		BlockInput Off
-	}
-return
 
 ^!CapsLock::
 	Keywait, Alt
@@ -3009,89 +2766,9 @@ return
 
 return
 
-^#!s::
-	KeyWait Control 
-	KeyWait Alt
-	KeyWait Shift
-	
-	WinActivate, ahk_class Shell_TrayWnd
-
-	KeyWait Control 
-	KeyWait Alt
-	KeyWait Shift
-	
-	SendInput, {End}
-	SendInput, {Home}
-	
-	
-	BlockInput On
-	Send #T
-	Sleep, 100
-	Loop,22{
-		Send, {right}
-	}
-	Send, {Enter}
-	
-	BlockInput Off
-return
-
-^#!d::
-	KeyWait Control 
-	KeyWait Alt
-	KeyWait Shift
-	
-	WinActivate, ahk_class Shell_TrayWnd
-
-	KeyWait Control 
-	KeyWait Alt
-	KeyWait Shift
-	
-	SendInput, {End}
-	SendInput, {Home}
-	
-	
-	BlockInput On
-	Send #T
-	Sleep, 100
-	Loop,23{
-		Send, {right}
-	}
-	Send, {Enter}
-	
-	BlockInput Off
-return
-
-^#!f::
-	KeyWait Control 
-	KeyWait Alt
-	KeyWait Shift
-	
-	WinActivate, ahk_class Shell_TrayWnd
-
-	KeyWait Control 
-	KeyWait Alt
-	KeyWait Shift
-	
-	SendInput, {End}
-	SendInput, {Home}
-	
-	
-	BlockInput On
-	Send #T
-	Sleep, 100
-	Loop,24{
-		Send, {right}
-	}
-	Send, {Enter}
-	
-	BlockInput Off
-return
-
-
 #+1::
     Run %A_ScriptDir%
 return
-
 
 
 +space::
@@ -3113,11 +2790,18 @@ if winactive("ahk_exe Code.exe")|| winactive("ahk_exe Code - Insiders.exe") || w
 return
 
 
-#F2::
-	WinMaximize, A
+^#1::
+	SetTitleMatchMode, 2
+
+	if Winexist("ahk_exe Notion.exe"){
+		GroupActivate NOTION, r
+	}
+	else{
+		run, C:\Users\%A_UserName%\AppData\Local\Programs\Notion\Notion.exe
+	}
 return
 
-#F3::
+#+r::
 	Reload
 return
 
@@ -3126,6 +2810,18 @@ return
 	Keywait, Lshift
 	Send, #6
 return
+
+
+!#c::
+	SendInput, #=
+return
+
+!#x::
+	SendInput, #-
+return
+
+#LButton::^Lbutton
+
 
 ^!+1::
 
@@ -3447,40 +3143,6 @@ $!x::
 return
 
 
-$!e::
-	if WinActive("Microsoft To-Do"){
-		Keywait, Alt
-		BlockInput,On
-		DPIsize:=checkDPIsize()
-		Dpiconv:=DPIsize/96
-		xx:=42*Dpiconv
-		yy:=42*Dpiconv
-		CoordMode, Mouse, Client
-		;~ MouseClick, left, xx, yy,2
-		MouseClick, left, xx, yy
-		Sleep,100
-		MouseClick, left, xx, yy
-		Sleep,100
-		Send, {Tab}
-		Send, {Down}
-		Loop,15{
-			Send, {Up}
-		}
-		Send, {Tab}
-		Loop,7{
-			Send, {Down}
-		}
-		Send, {Enter}
-		Loop,7{
-			Send,{Tab}
-		}
-		BlockInput,Off
-	}
-	else{
-		Sendinput, !{e}
-	}
-return
-
 !+q::
 	
 	Keywait Shift
@@ -3562,20 +3224,9 @@ return
 return
 
 
-
-
-
-$!F1::
-	
-	if winactive("pygdocseditor")|| winactive("pygdocdiary"){
-		WinMinimize
-	}
-	else{
-		Send !{F4}
-	}
-	SetCapsLockState , AlwaysOff
-
-return
+; $!F1::
+; 	Send !{F4}
+; return
 
 !F2::
 	Send {Del}
@@ -3592,13 +3243,70 @@ if WinActive("ahk_exe Explorer.EXE")||WinActive("ahk_exe doublecmd.exe")|| WinAc
 }
 return
 
-
-
-$!5:: 
-	FormatTime, CurrentDateTime,, yy_MMdd_
-	SendInput %CurrentDateTime%	
+RAlt::
+Hotkey, 5, label_5, On
+Hotkey, -, label__, On
+Hotkey, 9, label_9, On
+Hotkey, 0, label_0, On
+Hotkey, =, label_sum, On
 return
 
+RAlt Up::
+Hotkey, 5, Off
+Hotkey, -, Off
+Hotkey, 9, Off
+Hotkey, 0, Off
+Hotkey, =, Off
+return
+
+label_5:
+SendInput, {F5}
+return
+
+label__:
+SendInput, {F11}
+return
+
+label_9:
+SendInput, {F9}
+return
+
+label_0:
+SendInput, {F10}
+return
+
+label_sum:
+SendInput, {F12}
+return
+
+; $<!::
+; return
+
+; $<!5:: 
+; 	FormatTime, CurrentDateTime,, yy_MMdd_
+; 	SendInput %CurrentDateTime%	
+; return
+
+; $>!5:: 
+; 	SendInput, {F5}
+; return
+
+; $>!9:: 
+; 	SendInput, {F9}
+; return
+
+; $>!=:: 
+; 	SendInput, {F12}
+; return
+
+^#3::
+	if WinExist("ahk_exe whale.exe"){
+		WinActivate, ahk_exe whale.exe
+	}
+	else{
+		run, whale
+	}
+return
 
 
 !+5:: 
