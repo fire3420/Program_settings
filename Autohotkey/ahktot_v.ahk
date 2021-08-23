@@ -153,6 +153,32 @@ $d::
 	SetCapsLockState , AlwaysOff
 return
 
+$!c::
+	SetTitleMatchMode, 2
+
+	Send, {LAlt Down}
+	Sleep, 50
+	Loop, 1{
+    Click, WheelDown
+	}
+	Sleep, 50
+	Send, {LAlt Up}	
+	SetCapsLockState , AlwaysOff
+return
+
+$!d::
+	SetTitleMatchMode, 2
+
+	Send, {LAlt Down}
+	Sleep, 50
+	Loop, 1{
+    Click, WheelUp
+	}
+	Sleep, 50
+	Send, {LAlt Up}	
+	SetCapsLockState , AlwaysOff
+return
+
 $c::
 	SetTitleMatchMode, 2
 	
@@ -623,8 +649,8 @@ return
 
 
 $`::
-Send, {Backspace}
-SetCapsLockState , AlwaysOff
+	Send, {Backspace}
+	SetCapsLockState , AlwaysOff
 return
 
 $#`::
@@ -633,12 +659,23 @@ return
 
 
 $!`::
-Send, !{Left}
+
+	if Winactive("ahk_exe Notion.exe"){
+		Send, ^{[}
+	}
+	else{
+		Send, !{Left}
+	}
 SetCapsLockState , AlwaysOff
 return
 
 $!1::
-Send, !{Right}
+	if Winactive("ahk_exe Notion.exe"){
+		Send, ^{]}
+	}
+	else{
+		Send, !{Right}
+	}
 SetCapsLockState , AlwaysOff
 return
 
@@ -1386,21 +1423,6 @@ return
 	}
 return
 
-!+^Enter::
-	if WinActive("ahk_exe doublecmd.exe") || WinActive("ahk_class TTOTAL_CMD"){
-		Send, !{d}
-		Sleep,100
-		Send, ^{c}
-		Sleep,100
-		Send, #{e}
-		Sleep,100
-		Send, !{d}
-		Sleep,100
-		Send, ^{v}
-		Send, {Enter}
-	}
-return
-
 ^!F8::
 	capstate := GetKeyState("Capslock", "T")
 	if(capstate){
@@ -1605,37 +1627,6 @@ $^+s::
 	}
 return
 
-!#z::
-	SetTitleMatchMode, 2
-	if WinActive("Microsoft To-Do"){
-		
-		CoordMode, Mouse, Client
-		MouseGetPos, xpos, ypos 
-		
-		DPIsize:=checkDPIsize()
-		Dpiconv:=DPIsize/96
-		xx:=394*Dpiconv
-		yy:=ypos
-		
-		MouseMove, xx, yy
-	}
-	else if WinActive("Todoist"){
-		
-		CoordMode, Mouse, Client
-		MouseGetPos, xpos, ypos 
-		
-		DPIsize:=checkDPIsize()
-		Dpiconv:=DPIsize/96
-		xx:=535*Dpiconv
-		yy:=ypos
-		
-		MouseMove, xx, yy
-	}
-
-	Loop, 5{
-    Click, WheelUp
-	}
-return
 
 
 !#a::
@@ -2438,26 +2429,48 @@ return
 return
 
 
-$!+h::
-	if WinActive("ahk_exe POWERPNT.EXE"){
-		CoordMode, Pixel, Client
-		CoordMode, Mouse, Client
-		WinGetPos, X, Y, Width, Height, ahk_exe POWERPNT.EXE
-		xx:=Width/2
-		yy:=Height-100
-		MouseClick, left, xx, yy
-		Send, {PgUp}
-	}
-	else{
-		Send,!+{h}
-	}
-return
-
 
 Insert::
 	Sendinput, {delete}
 return
 
+
+$#+h::
+	if WinActive("ahk_exe chrome.exe"){
+		SendInput, !+h
+	}
+	else{
+		SendInput, #+h
+	}
+return
+
+$#+j::
+	if WinActive("ahk_exe chrome.exe"){
+		SendInput, !+j
+	}
+	else{
+		SendInput, #+j
+	}
+return
+
+$#+k::
+	if WinActive("ahk_exe chrome.exe"){
+		SendInput, !+k
+	}
+	else{
+		SendInput, #+k
+	}
+return
+
+
+$#+l::
+	if WinActive("ahk_exe chrome.exe"){
+		SendInput, !+l
+	}
+	else{
+		SendInput, #+l
+	}
+return
 
 !+z::
 	if Winexist("카카오톡"){
@@ -2704,44 +2717,6 @@ return
 return
 
 
-$^!s::
-	SetTitleMatchMode, 2
-	isc1:=1
-
-	if Winexist("Google 스프레드시트"){
-		GroupActivate, GCAL, r
-		isc1:=0
-	}
-
-	
-	if(isc1=1){
-		KeyWait Control  
-		KeyWait Alt
-		KeyWait Shift
-		
-		WinActivate, ahk_class Shell_TrayWnd
-		
-		KeyWait Control  
-		KeyWait Alt
-		KeyWait Shift
-		
-		SendInput, {End}
-		SendInput, {Home}
-		
-		
-		BlockInput On
-		Send #T
-		Sleep, 100
-		Loop,18{
-			Send, {right}
-		}
-		Send, {Enter}
-		
-		BlockInput Off
-	}
-
-return
-
 
 ^!CapsLock::
 	Keywait, Alt
@@ -2812,12 +2787,51 @@ return
 return
 
 
-!#c::
-	SendInput, #=
+!#x::
+	SetTitleMatchMode, 2
+
+	Send, {LAlt Down}
+	Sleep, 50
+	Loop, 1{
+    Click, WheelDown
+	}
+	Sleep, 50
+	Send, {LAlt Up}	
 return
 
-!#x::
-	SendInput, #-
+!#c::
+	Send, {LAlt Down}
+	Sleep, 50
+	Loop, 1{
+    Click, WheelUp
+	}
+	Sleep, 50
+	Send, {LAlt Up}	
+	SetCapsLockState , AlwaysOff
+return
+
+!#h::
+	Loop, 2{
+	Send, {Left}
+	}
+return
+
+!#l::
+	Loop, 2{
+	Send, {Right}
+	}
+return
+
+!#j::
+	Loop, 2{
+	Send, {Down}
+	}
+return
+
+!#k::
+	Loop, 2{
+	Send, {Up}
+	}
 return
 
 #LButton::^Lbutton
@@ -3214,10 +3228,16 @@ else{
 return
 
 
+$#Enter::
+	if Winactive("ahk_exe Code.exe") || Winactive("ahk_exe Code - Insiders.exe"){
+		SendInput, {Enter}
+	}
+	else{
+		SendInput, #{Enter}
+	}
 
-F1::
-	Send, {Enter}
 return
+
 
 ^!F1::
 	Send,{F1}
@@ -3300,17 +3320,17 @@ return
 ; return
 
 ^#3::
-	if WinExist("ahk_exe whale.exe"){
-		WinActivate, ahk_exe whale.exe
+	if WinExist("ahk_exe msedge.exe"){
+		WinActivate, ahk_exe msedge.exe
 	}
 	else{
-		run, whale
+		run, msedge
 	}
 return
 
 
 !+5:: 
-	FormatTime, CurrentDateTime,, yy_MMdd_HHmm_
+	FormatTime, CurrentDateTime,, yyyy-MM-dd
 	SendInput %CurrentDateTime%
 return
 
@@ -3367,60 +3387,6 @@ else{
 return
 
 
-#IfWinActive, ahk_class IEFrame 
-+WheelUp:: ; scroll right 
-	BlockInput On
-	CoordMode, Pixel, Client
-	
-	WinGetPos, X1, Y1, Width1, Height1, A
-	Height2:=Height1-20
-
-	Loop, 1{
-		MouseClick, left, 20, Height2
-	}
-
-	
-	BlockInput Off
-	SendInput, {Shift Up}
-	
-
-return 
-
-+WheelDown:: ; scroll left 
-	BlockInput On
-	CoordMode, Pixel, Client
-	
-	WinGetPos, X1, Y1, Width1, Height1, A
-	Width2:=Width1-40
-	Height2:=Height1-20
-
-	Loop, 1{
-		MouseClick, left, Width2, Height2
-	}
-	
-	BlockInput Off
-	SendInput, {Shift Up}
-return
-
-
-#IfWinActive
-
-!+a::
-DetectHiddenWindows, On
-SetTitleMatchMode, 2
-If WinExist("Jungyong's Record"){
-	WinActivate, ahk_exe ahkgui.exe
-}
-else if WinExist("pygdocseditor2"){
-	WinActivate, pygdocseditor2
-}
-else if WinExist("Edit Gdocs address"){
-	WinActivate, Edit Gdocs address
-}
-else{
-run, run_pygdocs.ahk
-}
-return
 
 
 
