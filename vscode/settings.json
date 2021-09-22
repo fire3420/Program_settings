@@ -14,10 +14,18 @@
             "after": [
                 "<Esc>"
             ]
+        },
+        {
+            "before": [
+                "<A-j>",
+            ],
+            "after": [
+                "<Esc>"
+            ]
         }
     ],
     "vim.easymotion": true,
-    "vim.easymotionMarkerFontSize": 12,
+    "vim.easymotionMarkerFontSize": 15,
     "vim.easymotionMarkerBackgroundColor": "blue",
     "vim.useSystemClipboard": true,
     "vim.leader": "\\",
@@ -133,60 +141,55 @@
         }
     ],
     "todo-tree.highlights.enabled": true,
-    "workbench.editor.enablePreview": false,
-    "terminal.integrated.inheritEnv": true,
-    "window.zoomLevel": 0,
+    "terminal.integrated.inheritEnv": false,
     "todo-tree.tree.showScanModeButton": false,
     "vim.hlsearch": true,
-    "python.pythonPath": "/home/john/anaconda3/envs/pygdocs_linux/bin/python",
-    "explorer.confirmDragAndDrop": false,
+    "workbench.editor.enablePreview": false,
+    "remote.SSH.remotePlatform": {
+        "h6_tf1": "linux",
+        "h6_tf3": "linux",
+        "hm_pred": "linux",
+        "hm_cron": "linux",
+        "h6_tfpredict": "linux",
+        "AMD_jyRL1": "linux",
+        "AMD_jyRL2": "linux",
+        "h6_rl2": "linux",
+        "hm_tfpredict": "linux",
+        "AMD_jyRL2_win": "linux",
+        "AMD_jyRL3": "linux",
+        "HP_jyRL3": "linux",
+        "HM_rl3": "linux",
+        "RTL": "linux",
+        "HM_cd": "linux",
+        "h6_rl3": "linux",
+        "AMD_coding": "linux",
+        "AMD_rapids": "linux",
+        "HANJOON": "linux"
+    },
+    "editor.fontSize": 18,
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "python.jediEnabled": false,
-    "python.languageServer": "Microsoft",
+    "python.languageServer": "Pylance",
     "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace",
-    "vsnotes.defaultNotePath": "/home/john/Jungyong/Projects/blog_secret/_posts",
-    // "vsnotes.defaultNotePath": "/home/john/Jungyong/Projects/gitlab_blog_mysecret/_posts",
-    "vsnotes.defaultNoteTitle": "{dt}-memo_{dd}_{title}.{ext}",
-    "vsnotes.templates": [
-        "0quicknote",
-        "1coin",
-        "2stock",
-        "3dev",
-        "4paper",
-        "5envops",
-        "6unclassified",
-        "7automation",
-        "9diary",
-        "10realest",
-    ],
-    "vsnotes.tokens": [
-        {
-            "type": "datetime",
-            "token": "{dt}",
-            "format": "YYYY-MM-DD",
-            "description": "Insert formatted datetime."
-        },
-        {
-            "type": "datetime",
-            "token": "{dd}",
-            "format": "HH-mm",
-            "description": "Insert formatted datetime."
-        },
-        {
-            "type": "title",
-            "token": "{title}",
-            "description": "Insert note title from input box.",
-            "format": "Untitled"
-        },
-        {
-            "type": "extension",
-            "token": "{ext}",
-            "description": "Insert file vsnotes.",
-            "format": "md"
-        }
-    ],
-    "vsnotes.defaultNoteName": "Note",
     "workbench.colorTheme": "Monokai",
-    "joplin.token": "ba56e90a472cc55c4637d1bf56b6ea862b6a396b12d20d59504bcb8b15069644ed79c8971001b67a745123416c0467b8f3434ce3f49fcccc84df8b7524651d56",
+    "update.enableWindowsBackgroundUpdates": false,
+    "files.autoGuessEncoding": true,
+    "vscode-mysql.resultTheme": "Dark",
+    "vscodeGoogleTranslate.preferredLanguage": "English",
+    "editor.gotoLocation.multipleDefinitions": "gotoAndPeek",
+    "editor.gotoLocation.multipleTypeDefinitions": "gotoAndPeek",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "python.insidersChannel": "weekly",
+    "jupyter.askForKernelRestart": false,
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "window.zoomLevel": 0,
+    "security.workspace.trust.untrustedFiles": "open",
+    "gitlens.advanced.messages": {
+        "suppressGitMissingWarning": true
+    },
 }

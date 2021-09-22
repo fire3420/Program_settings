@@ -1,6 +1,6 @@
 {
     "type": "script",
-    "description": "down_right",
+    "description": "Insert2delete",
     "store": {},
     "modes": [
         3
@@ -18,10 +18,8 @@
         "wordChars": "[\\w]"
     },
     "hotkey": {
-        "modifiers": [
-            "<hyper>"
-        ],
-        "hotKey": "j"
+        "modifiers": [],
+        "hotKey": "<insert>"
     },
     "filter": {
         "regex": null,

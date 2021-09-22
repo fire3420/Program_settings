@@ -1,6 +1,6 @@
 {
     "type": "script",
-    "description": "down_right",
+    "description": "delete",
     "store": {},
     "modes": [
         3
@@ -19,9 +19,9 @@
     },
     "hotkey": {
         "modifiers": [
-            "<hyper>"
+            "<super>"
         ],
-        "hotKey": "j"
+        "hotKey": "<backspace>"
     },
     "filter": {
         "regex": null,

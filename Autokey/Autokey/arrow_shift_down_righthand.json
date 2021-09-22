@@ -1,6 +1,6 @@
 {
     "type": "script",
-    "description": "down_right",
+    "description": "arrow_shift_down_righthand",
     "store": {},
     "modes": [
         3
@@ -19,7 +19,8 @@
     },
     "hotkey": {
         "modifiers": [
-            "<hyper>"
+            "<hyper>",
+            "<shift>"
         ],
         "hotKey": "j"
     },

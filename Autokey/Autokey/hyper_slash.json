@@ -1,6 +1,6 @@
 {
     "type": "script",
-    "description": "down_right",
+    "description": "hyper_slash",
     "store": {},
     "modes": [
         3
@@ -21,7 +21,7 @@
         "modifiers": [
             "<hyper>"
         ],
-        "hotKey": "j"
+        "hotKey": "/"
     },
     "filter": {
         "regex": null,

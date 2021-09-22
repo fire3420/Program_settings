@@ -1,6 +1,6 @@
 {
     "type": "script",
-    "description": "down_right",
+    "description": "Enter",
     "store": {},
     "modes": [
         3
@@ -18,10 +18,8 @@
         "wordChars": "[\\w]"
     },
     "hotkey": {
-        "modifiers": [
-            "<hyper>"
-        ],
-        "hotKey": "j"
+        "modifiers": [],
+        "hotKey": "`"
     },
     "filter": {
         "regex": null,

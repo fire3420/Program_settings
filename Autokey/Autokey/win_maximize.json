@@ -1,11 +1,9 @@
 {
     "type": "script",
-    "description": "down_right",
+    "description": "win_maximize",
     "store": {},
-    "modes": [
-        3
-    ],
-    "usageCount": 0,
+    "modes": [],
+    "usageCount": 18,
     "prompt": false,
     "omitTrigger": false,
     "showInTrayMenu": false,
@@ -18,10 +16,8 @@
         "wordChars": "[\\w]"
     },
     "hotkey": {
-        "modifiers": [
-            "<hyper>"
-        ],
-        "hotKey": "j"
+        "modifiers": null,
+        "hotKey": "q"
     },
     "filter": {
         "regex": null,

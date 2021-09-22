@@ -1,1 +1,3 @@
-keyboard.send_keys('<backspace>')
+# Enter script code
+output='<alt>+<left>'
+keyboard.send_keys(output)

@@ -1,6 +1,6 @@
 {
     "type": "script",
-    "description": "down_right",
+    "description": "activate_vscode",
     "store": {},
     "modes": [
         3
@@ -21,7 +21,7 @@
         "modifiers": [
             "<hyper>"
         ],
-        "hotKey": "j"
+        "hotKey": "0"
     },
     "filter": {
         "regex": null,

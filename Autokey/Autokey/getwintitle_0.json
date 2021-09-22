@@ -1,6 +1,6 @@
 {
     "type": "script",
-    "description": "down_right",
+    "description": "getwintitle_0",
     "store": {},
     "modes": [
         3
@@ -19,9 +19,11 @@
     },
     "hotkey": {
         "modifiers": [
-            "<hyper>"
+            "<ctrl>",
+            "<shift>",
+            "<super>"
         ],
-        "hotKey": "j"
+        "hotKey": "t"
     },
     "filter": {
         "regex": null,

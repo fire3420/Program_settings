@@ -1,6 +1,6 @@
 {
     "type": "script",
-    "description": "down_right",
+    "description": "arrow_down_lefthand",
     "store": {},
     "modes": [
         3
@@ -21,7 +21,7 @@
         "modifiers": [
             "<hyper>"
         ],
-        "hotKey": "j"
+        "hotKey": "w"
     },
     "filter": {
         "regex": null,

@@ -1,6 +1,6 @@
 {
     "type": "script",
-    "description": "down_right",
+    "description": "hyper_Click_mouse",
     "store": {},
     "modes": [
         3
@@ -21,7 +21,7 @@
         "modifiers": [
             "<hyper>"
         ],
-        "hotKey": "j"
+        "hotKey": " "
     },
     "filter": {
         "regex": null,

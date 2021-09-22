@@ -1,11 +1,11 @@
 {
     "type": "script",
-    "description": "down_right",
-    "store": {},
-    "modes": [
-        3
-    ],
-    "usageCount": 0,
+    "description": "activate_dolphin",
+    "store": {
+        "as1_index": 0
+    },
+    "modes": [],
+    "usageCount": 31,
     "prompt": false,
     "omitTrigger": false,
     "showInTrayMenu": false,
@@ -18,10 +18,8 @@
         "wordChars": "[\\w]"
     },
     "hotkey": {
-        "modifiers": [
-            "<hyper>"
-        ],
-        "hotKey": "j"
+        "modifiers": null,
+        "hotKey": "1"
     },
     "filter": {
         "regex": null,

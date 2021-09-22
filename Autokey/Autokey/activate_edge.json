@@ -1,11 +1,13 @@
 {
     "type": "script",
-    "description": "down_right",
-    "store": {},
+    "description": "activate_edge",
+    "store": {
+        "as3_index_insiders": 0
+    },
     "modes": [
         3
     ],
-    "usageCount": 0,
+    "usageCount": 3,
     "prompt": false,
     "omitTrigger": false,
     "showInTrayMenu": false,
@@ -19,9 +21,10 @@
     },
     "hotkey": {
         "modifiers": [
-            "<hyper>"
+            "<ctrl>",
+            "<super>"
         ],
-        "hotKey": "j"
+        "hotKey": "3"
     },
     "filter": {
         "regex": null,
